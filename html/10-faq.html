@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs | GlassQuick</title>
+<meta name="description" content="Frequently asked questions about GlassQuick — products, measurement, installation, warranty, and ordering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root {
+  --primary:    #1A4F7A;
+  --secondary:  #0992C2;
+  --cta:        #1E88E5;
+  --accent:     #00A8A8;
+  --accent-hov: #1565C0;
+  --border:     #E0E0E0;
+  --surface:    #FFFFFF;
+  --text:       #1A1A1A;
+  --text-2:     #555555;
+  --text-3:     #888888;
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.10);
+  --font-sans:  'Poppins', sans-serif;
+  --font-body:  'Inter', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); color: var(--text); background: #fff; min-height: 100vh; padding-bottom: 3rem; }
+.faq-item { display: none; }
+.faq-item.active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:#1a3a5c;padding:5rem 2rem;text-align:center;color:#fff;">
+  <div style="position:absolute;inset:0;opacity:0.10;background-image:radial-gradient(circle at 2px 2px, white 1px, transparent 0);background-size:40px 40px;"></div>
+  <div style="position:relative;z-index:1;max-width:768px;margin:0 auto;">
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.10);color:#a8d4f5;font-size:0.625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;padding:0.25rem 1rem;border-radius:999px;margin-bottom:1rem;backdrop-filter:blur(4px);">Support Center</span>
+    <h1 style="font-family:var(--font-sans);font-size:clamp(1.875rem,4vw,3rem);font-weight:700;color:#fff;margin-bottom:1.5rem;line-height:1.2;">How can we <span style="color:#3a9fff;">help</span> you?</h1>
+    <p style="font-size:clamp(0.875rem,2vw,1rem);line-height:1.7;color:#a8c8e8;max-width:560px;margin:0 auto;">Find answers to frequently asked questions about our products, process, and services.</p>
+  </div>
+</section>
+
+<!-- FAQ FILTER + CONTENT -->
+<section style="padding:0 1.5rem 3rem;position:relative;z-index:20;margin-top:-2.5rem;">
+  <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:16px;border:1px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,0.10);padding:2rem;">
+
+    <!-- Category Buttons -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;margin-bottom:2.5rem;">
+      <button id="cat-General" onclick="filterFaq('General')" style="padding:0.625rem 1.5rem;border-radius:999px;font-size:0.75rem;font-weight:700;background:var(--primary);color:#fff;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(26,79,122,0.20);transition:all 0.2s;">General</button>
+      <button id="cat-Measurement" onclick="filterFaq('Measurement')" style="padding:0.625rem 1.5rem;border-radius:999px;font-size:0.75rem;font-weight:700;background:#f9fafb;color:var(--text-3);border:none;cursor:pointer;transition:all 0.2s;">Measurement</button>
+      <button id="cat-Installation" onclick="filterFaq('Installation')" style="padding:0.625rem 1.5rem;border-radius:999px;font-size:0.75rem;font-weight:700;background:#f9fafb;color:var(--text-3);border:none;cursor:pointer;transition:all 0.2s;">Installation</button>
+      <button id="cat-Warranty" onclick="filterFaq('Warranty')" style="padding:0.625rem 1.5rem;border-radius:999px;font-size:0.75rem;font-weight:700;background:#f9fafb;color:var(--text-3);border:none;cursor:pointer;transition:all 0.2s;">Warranty</button>
+      <button id="cat-Ordering" onclick="filterFaq('Ordering')" style="padding:0.625rem 1.5rem;border-radius:999px;font-size:0.75rem;font-weight:700;background:#f9fafb;color:var(--text-3);border:none;cursor:pointer;transition:all 0.2s;">Ordering</button>
+    </div>
+
+    <!-- FAQ Items -->
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+
+      <!-- General FAQs -->
+      <div class="faq-item active" data-category="General">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">What is GlassQuick?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">GlassQuick is India's leading digital-first glass brand, providing end-to-end solutions for mirrors, shower partitions, windows, and more using laser measurement technology.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item active" data-category="General">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">Where do you operate?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">We currently operate in Mumbai, Pune, Thane, Navi Mumbai, Noida, and Gurgaon. We are rapidly expanding to other cities across India.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="Measurement">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">How accurate are your measurements?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">We use professional-grade laser measurement tools and proprietary software to ensure accuracy within 1mm, significantly reducing errors compared to traditional tape measurements.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="Measurement">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">Is there a fee for site visits?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">Site visit fees may apply depending on your location and project size. However, this fee is often adjusted against your final order value.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="Installation">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">Who will install the glass?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">All installations are carried out by our own team of certified GlassQuick specialists. We do not outsource installations to third-party contractors to maintain quality.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="Warranty">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">What does the 1-year warranty cover?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">Our 1-year warranty covers manufacturing defects and installation issues. It does not cover accidental breakage or damage caused by improper maintenance.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="Ordering">
+        <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem;text-align:left;background:#fff;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='#fff'">
+            <span style="font-size:0.875rem;font-weight:700;color:var(--text);">Can I cancel my order?</span>
+            <i class="ti ti-chevron-down" style="transition:transform 0.3s;flex-shrink:0;"></i>
+          </button>
+          <div style="display:none;border-top:1px solid var(--border);">
+            <div style="padding:1.25rem;font-size:0.75rem;color:var(--text-2);line-height:1.7;background:rgba(249,250,251,0.5);">Orders can be cancelled before they go into processing. Once the glass is cut to your custom measurements, cancellations are not possible. Please refer to our Cancellation Policy for details.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- USP SECTION -->
+<section style="background:#f9fafb;padding:4rem 1.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2rem;">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1.25rem;"><i class="ti ti-ruler-measure" style="font-size:1.5rem;"></i></div>
+        <h3 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Free Measurement</h3>
+        <p style="font-size:0.75rem;color:var(--text-2);line-height:1.6;max-width:200px;">Expert laser-precise measurement for a perfect fit.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1.25rem;"><i class="ti ti-medal" style="font-size:1.5rem;"></i></div>
+        <h3 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Premium Quality</h3>
+        <p style="font-size:0.75rem;color:var(--text-2);line-height:1.6;max-width:200px;">Top-grade glass with industry-leading clarity and durability.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1.25rem;"><i class="ti ti-tool" style="font-size:1.5rem;"></i></div>
+        <h3 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Expert Installation</h3>
+        <p style="font-size:0.75rem;color:var(--text-2);line-height:1.6;max-width:200px;">Professional installation team with 10+ years experience.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1.25rem;"><i class="ti ti-shield-check" style="font-size:1.5rem;"></i></div>
+        <h3 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">1 Year Warranty</h3>
+        <p style="font-size:0.75rem;color:var(--text-2);line-height:1.6;max-width:200px;">Comprehensive warranty coverage for your peace of mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STILL HAVE QUESTIONS -->
+<section style="padding:5rem 1.5rem;text-align:center;">
+  <div style="max-width:672px;margin:0 auto;">
+    <div style="margin-bottom:2rem;">
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(26,79,122,0.10);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+        <i class="ti ti-help" style="font-size:1.875rem;"></i>
+      </div>
+      <h2 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:1rem;">Still have questions?</h2>
+      <p style="font-size:0.875rem;color:var(--text-2);line-height:1.7;">If you couldn't find the answer you were looking for, our friendly team is here to help.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+      <a href="/contact" style="border-radius:12px;background:var(--primary);padding:1rem 2rem;font-size:0.875rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 10px 20px rgba(0,0,0,0.12);transition:background 0.2s;" onmouseover="this.style.background='var(--accent-hov)'" onmouseout="this.style.background='var(--primary)'">Contact Us</a>
+      <a href="/book-visit" style="border-radius:12px;border:1px solid var(--border);padding:1rem 2rem;font-size:0.875rem;font-weight:700;color:var(--text);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='transparent'">Book a Site Visit</a>
+    </div>
+  </div>
+</section>
+
+<script>
+function filterFaq(category) {
+  // Update button styles
+  var cats = ['General','Measurement','Installation','Warranty','Ordering'];
+  cats.forEach(function(cat) {
+    var btn = document.getElementById('cat-' + cat);
+    if (cat === category) {
+      btn.style.background = 'var(--primary)';
+      btn.style.color = '#fff';
+      btn.style.boxShadow = '0 4px 12px rgba(26,79,122,0.20)';
+    } else {
+      btn.style.background = '#f9fafb';
+      btn.style.color = 'var(--text-3)';
+      btn.style.boxShadow = 'none';
+    }
+  });
+  // Show/hide FAQ items
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item) {
+    var itemCat = item.getAttribute('data-category');
+    if (itemCat === category || category === 'General') {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('i');
+  var isOpen = answer.style.display === 'block';
+  answer.style.display = isOpen ? 'none' : 'block';
+  icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+</script>
+</body>
+</html>

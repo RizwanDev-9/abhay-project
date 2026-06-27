@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Clients | GlassQuick</title>
+<meta name="description" content="GlassQuick clients — trusted by builders, designers, hotels, offices, retail and hospitals across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--accent-hov:#1565C0;--border:#E0E0E0;--surface:#FFFFFF;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--shadow-md:0 4px 20px rgba(0,0,0,0.10);--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;padding-bottom:3rem;}
+.clients-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+@media(max-width:900px){
+  .clients-grid{grid-template-columns:repeat(3,1fr) !important;}
+}
+@media(max-width:600px){
+  .clients-grid{grid-template-columns:1fr 1fr !important;}
+  .stats-grid{grid-template-columns:1fr 1fr !important;}
+  .filter-tabs{gap:0.5rem !important;}
+  .filter-tab{padding:0.375rem 0.75rem !important;font-size:0.6875rem !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:var(--primary);padding:4rem 2rem;text-align:center;">
+  <div style="position:absolute;inset:0;opacity:0.10;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.3) 0px,rgba(255,255,255,0.3) 1px,transparent 1px,transparent 24px);"></div>
+  <div style="position:relative;z-index:1;">
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,0.20);background:rgba(255,255,255,0.10);color:#a8d4f5;font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;padding:0.375rem 1rem;border-radius:999px;margin-bottom:1rem;">Our Clients</span>
+    <h1 style="font-family:var(--font-sans);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;margin-bottom:0.75rem;">Trusted by Businesses Across Industries</h1>
+    <p style="font-size:0.875rem;line-height:1.7;color:#a8c8e8;max-width:360px;margin:0 auto;">From builders and hotels to designers and hospitals — GlassQuick delivers precision glass solutions for every kind of project.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="border-bottom:1px solid var(--border);background:rgba(249,250,251,0.5);padding:3rem 1.5rem 4rem;">
+  <div style="max-width:1152px;margin:0 auto;">
+    <div class="stats-grid">
+      <div style="border-radius:12px;border:1px solid var(--border);background:#fff;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+        <div style="font-size:1.5rem;font-weight:700;color:#1a3a5c;font-family:var(--font-sans);">200<span style="font-size:1.1rem;color:#2b7dd4;">+</span></div>
+        <div style="margin-top:0.25rem;font-size:0.625rem;line-height:1.3;color:var(--text-2);">Happy Clients</div>
+      </div>
+      <div style="border-radius:12px;border:1px solid var(--border);background:#fff;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+        <div style="font-size:1.5rem;font-weight:700;color:#1a3a5c;font-family:var(--font-sans);">6</div>
+        <div style="margin-top:0.25rem;font-size:0.625rem;line-height:1.3;color:var(--text-2);">Industries Served</div>
+      </div>
+      <div style="border-radius:12px;border:1px solid var(--border);background:#fff;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+        <div style="font-size:1.5rem;font-weight:700;color:#1a3a5c;font-family:var(--font-sans);">500<span style="font-size:1.1rem;color:#2b7dd4;">+</span></div>
+        <div style="margin-top:0.25rem;font-size:0.625rem;line-height:1.3;color:var(--text-2);">Projects Completed</div>
+      </div>
+      <div style="border-radius:12px;border:1px solid var(--border);background:#fff;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+        <div style="font-size:1.5rem;font-weight:700;color:#1a3a5c;font-family:var(--font-sans);">15<span style="font-size:1.1rem;color:#2b7dd4;">+</span></div>
+        <div style="margin-top:0.25rem;font-size:0.625rem;line-height:1.3;color:var(--text-2);">Cities Covered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- CLIENT GRID -->
+<section style="padding:4rem 1.5rem 5rem;">
+  <div style="max-width:1152px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span style="display:inline-block;border:1px solid rgba(26,79,122,0.20);background:rgba(26,79,122,0.05);color:var(--primary);font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;padding:0.375rem 1rem;border-radius:999px;margin-bottom:0.75rem;">Our Client Base</span>
+      <h2 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Browse by Industry</h2>
+      <p style="font-size:0.875rem;color:var(--text-2);">Click any filter to explore our diverse client portfolio</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-bottom:3rem;">
+      <button class="filter-tab" id="filter-all" onclick="filterClients('all')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid #1a3a5c;background:#1a3a5c;color:#fff;padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-layout-grid" style="font-size:0.8125rem;"></i> All</button>
+      <button class="filter-tab" id="filter-builder" onclick="filterClients('builder')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text-2);padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-hammer" style="font-size:0.8125rem;"></i> Builders</button>
+      <button class="filter-tab" id="filter-designer" onclick="filterClients('designer')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text-2);padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-palette" style="font-size:0.8125rem;"></i> Designers</button>
+      <button class="filter-tab" id="filter-hotel" onclick="filterClients('hotel')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text-2);padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-bed" style="font-size:0.8125rem;"></i> Hotels</button>
+      <button class="filter-tab" id="filter-office" onclick="filterClients('office')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text-2);padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-building" style="font-size:0.8125rem;"></i> Offices</button>
+      <button class="filter-tab" id="filter-retail" onclick="filterClients('retail')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text-2);padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-shopping-bag" style="font-size:0.8125rem;"></i> Retail</button>
+      <button class="filter-tab" id="filter-hospital" onclick="filterClients('hospital')" style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text-2);padding:0.375rem 0.875rem;font-size:0.75rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;"><i class="ti ti-heart-rate-monitor" style="font-size:0.8125rem;"></i> Hospitals</button>
+    </div>
+
+    <!-- Clients Grid -->
+    <div class="clients-grid" id="clients-grid"></div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- TESTIMONIALS -->
+<section style="padding:4rem 1.5rem 5rem;">
+  <div style="max-width:900px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <h2 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">What Our Clients Say</h2>
+      <p style="font-size:0.875rem;color:var(--text-2);">From long-term partners to first-time projects</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+      <!-- Featured -->
+      <div style="display:flex;flex-direction:column;gap:0.75rem;border-radius:12px;border:1px solid #b5d4f4;background:#f5faff;padding:1.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+        <div style="font-size:1.5rem;font-family:Georgia,serif;line-height:1;color:#b5d4f4;">"</div>
+        <p style="font-size:0.6875rem;font-style:italic;line-height:1.7;color:var(--text);">We've been using GlassQuick for all our residential projects for over 2 years. The 2-level measurement process is a game changer — zero rework, zero delays on site. Every panel fits on the first attempt. For a builder, that kind of reliability is invaluable.</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;padding-top:0.25rem;">
+          <div style="width:36px;height:36px;flex-shrink:0;border-radius:50%;background:#1a3a5c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">SR</div>
+          <div style="flex:1;">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text);">Suresh Rathi</div>
+            <div style="font-size:0.625rem;color:var(--text-2);">Director, Shree Ram Builders · Mumbai</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.375rem;">
+            <div style="display:flex;gap:1px;color:#f5a623;font-size:0.625rem;"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <span style="border-radius:999px;background:#dbeeff;padding:0.125rem 0.5rem;font-size:0.5625rem;font-weight:700;color:#1a5fa8;">Builder &amp; contractor</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:0.75rem;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.25rem;">
+        <div style="font-size:1.5rem;font-family:Georgia,serif;line-height:1;color:#b5d4f4;">"</div>
+        <p style="font-size:0.6875rem;font-style:italic;line-height:1.7;color:var(--text);">As an interior designer, I need glass that matches my specs exactly — no compromises. GlassQuick delivers custom cuts with precision every time. I've used them on 6 projects now and never had a single sizing issue.</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;padding-top:0.25rem;">
+          <div style="width:36px;height:36px;flex-shrink:0;border-radius:50%;background:#534ab7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">MA</div>
+          <div style="flex:1;">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text);">Meera Agarwal</div>
+            <div style="font-size:0.625rem;color:var(--text-2);">Principal Designer, Meera Studios · Mumbai</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.375rem;">
+            <div style="display:flex;gap:1px;color:#f5a623;font-size:0.625rem;"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <span style="border-radius:999px;background:#dbeeff;padding:0.125rem 0.5rem;font-size:0.5625rem;font-weight:700;color:#1a5fa8;">Interior designer</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:0.75rem;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.25rem;">
+        <div style="font-size:1.5rem;font-family:Georgia,serif;line-height:1;color:#b5d4f4;">"</div>
+        <p style="font-size:0.6875rem;font-style:italic;line-height:1.7;color:var(--text);">We needed 40+ glass panels for a hotel renovation — all different sizes. GlassQuick handled the bulk order seamlessly, prioritised our timeline, and the installation team worked around our hotel operations without disruption. Outstanding service.</p>
+        <div style="display:flex;align-items:center;gap:0.75rem;padding-top:0.25rem;">
+          <div style="width:36px;height:36px;flex-shrink:0;border-radius:50%;background:#0f6e56;color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">RH</div>
+          <div style="flex:1;">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text);">Rohan Hegde</div>
+            <div style="font-size:0.625rem;color:var(--text-2);">Operations Manager, Radiance Hotel · Mumbai</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.375rem;">
+            <div style="display:flex;gap:1px;color:#f5a623;font-size:0.625rem;"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <span style="border-radius:999px;background:#dbeeff;padding:0.125rem 0.5rem;font-size:0.5625rem;font-weight:700;color:#1a5fa8;">Hotel &amp; hospitality</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- PARTNER CTA -->
+<section style="padding:4rem 1.5rem 5rem;">
+  <div style="max-width:900px;margin:0 auto;">
+    <div style="border-radius:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));padding:2.5rem 3rem;text-align:center;box-shadow:var(--shadow-md);">
+      <h3 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Work with Us on Your Next Project</h3>
+      <p style="font-size:0.875rem;line-height:1.7;color:#a8c8e8;margin-bottom:2rem;">Whether it's 1 panel or 100 — we're the glass partner that builders, designers and businesses rely on.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-bottom:2rem;">
+        <span style="display:inline-flex;align-items:center;gap:0.375rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);color:#d4eafc;border-radius:999px;padding:0.25rem 0.625rem;font-size:0.625rem;"><i class="ti ti-discount" style="font-size:0.6875rem;"></i> Bulk pricing</span>
+        <span style="display:inline-flex;align-items:center;gap:0.375rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);color:#d4eafc;border-radius:999px;padding:0.25rem 0.625rem;font-size:0.625rem;"><i class="ti ti-rocket" style="font-size:0.6875rem;"></i> Priority delivery</span>
+        <span style="display:inline-flex;align-items:center;gap:0.375rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);color:#d4eafc;border-radius:999px;padding:0.25rem 0.625rem;font-size:0.625rem;"><i class="ti ti-ruler-measure" style="font-size:0.6875rem;"></i> Site measurement</span>
+        <span style="display:inline-flex;align-items:center;gap:0.375rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);color:#d4eafc;border-radius:999px;padding:0.25rem 0.625rem;font-size:0.625rem;"><i class="ti ti-tools" style="font-size:0.6875rem;"></i> Full installation</span>
+      </div>
+      <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;border-radius:999px;background:#fff;padding:0.875rem 2rem;font-size:0.875rem;font-weight:700;color:var(--primary);text-decoration:none;box-shadow:var(--shadow-md);transition:background 0.2s;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='#fff'"><i class="ti ti-phone-call"></i> Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER BAR -->
+<section style="background:var(--primary);padding:4rem 2rem;text-align:center;color:#fff;">
+  <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Let's Work Together</h2>
+  <p style="font-size:0.875rem;color:#a8c8e8;margin-bottom:2rem;">Join 200+ businesses who trust GlassQuick for precision glass on every project.</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+    <a href="/bulk-orders" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;color:var(--primary);font-family:var(--font-body);font-size:0.875rem;font-weight:700;padding:0.875rem 2rem;border-radius:999px;text-decoration:none;box-shadow:var(--shadow-md);transition:background 0.2s;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='#fff'"><i class="ti ti-building"></i> Bulk Order Enquiry</a>
+    <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.30);color:#fff;font-family:var(--font-body);font-size:0.875rem;font-weight:700;padding:0.875rem 2rem;border-radius:999px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.10)'" onmouseout="this.style.background='transparent'"><i class="ti ti-phone-call"></i> Request Callback</a>
+  </div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<div style="border-top:1px solid var(--border);padding:2rem 1.5rem;">
+  <div style="max-width:1152px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+    <a href="/reviews" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-star" style="color:var(--primary);font-size:0.875rem;"></i> Customer Reviews</a>
+    <a href="/size-guide" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-ruler-2" style="color:var(--primary);font-size:0.875rem;"></i> Size Guide</a>
+    <a href="/bulk-orders" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-building" style="color:var(--primary);font-size:0.875rem;"></i> Bulk Orders</a>
+    <a href="/franchise-inquiry" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-building-store" style="color:var(--primary);font-size:0.875rem;"></i> Franchise Inquiry</a>
+    <a href="/book-visit" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-map-pin" style="color:var(--primary);font-size:0.875rem;"></i> Book Site Visit</a>
+  </div>
+</div>
+
+<script>
+var clients = [
+  {id:1,name:'Shree Ram Builders',initials:'SR',bgColor:'#1a3a5c',category:'builder',tag:'Builder & contractor',tagIcon:'ti-hammer',location:'Mumbai'},
+  {id:2,name:'Kalpataru Infra',initials:'KI',bgColor:'#0f2840',category:'builder',tag:'Builder & contractor',tagIcon:'ti-hammer',location:'Pune'},
+  {id:3,name:'Patel Constructions',initials:'PC',bgColor:'#1a5fa8',category:'builder',tag:'Builder & contractor',tagIcon:'ti-hammer',location:'Thane'},
+  {id:4,name:'Meera Studios',initials:'MS',bgColor:'#534ab7',category:'designer',tag:'Interior designer',tagIcon:'ti-palette',location:'Mumbai'},
+  {id:5,name:'Archi Designhaus',initials:'AD',bgColor:'#3c3489',category:'designer',tag:'Architecture firm',tagIcon:'ti-palette',location:'Pune'},
+  {id:6,name:'Space & Nature',initials:'SN',bgColor:'#854f0b',category:'designer',tag:'Interior designer',tagIcon:'ti-palette',location:'Navi Mumbai'},
+  {id:7,name:'Radiance Hotel',initials:'RH',bgColor:'#0f6e56',category:'hotel',tag:'Hotel & hospitality',tagIcon:'ti-bed',location:'Mumbai'},
+  {id:8,name:'Grand Residency',initials:'GR',bgColor:'#085041',category:'hotel',tag:'Hotel & hospitality',tagIcon:'ti-bed',location:'Lonavala'},
+  {id:9,name:'TechZone India',initials:'TZ',bgColor:'#1a5fa8',category:'office',tag:'Corporate office',tagIcon:'ti-building',location:'Thane'},
+  {id:10,name:'Nexus Workspaces',initials:'NX',bgColor:'#0f2840',category:'office',tag:'Co-working space',tagIcon:'ti-building',location:'Mumbai'},
+  {id:11,name:'Vertex Finance',initials:'VF',bgColor:'#1a3a5c',category:'office',tag:'Corporate office',tagIcon:'ti-building',location:'Pune'},
+  {id:12,name:'Luxe Showroom',initials:'LS',bgColor:'#a32d2d',category:'retail',tag:'Retail showroom',tagIcon:'ti-shopping-bag',location:'Mumbai'},
+  {id:13,name:'Fashion Mall',initials:'FM',bgColor:'#7c1d1d',category:'retail',tag:'Retail & fashion',tagIcon:'ti-shopping-bag',location:'Navi Mumbai'},
+  {id:14,name:'Heritage Gallery',initials:'HG',bgColor:'#633806',category:'retail',tag:'Art gallery & retail',tagIcon:'ti-shopping-bag',location:'Pune'},
+  {id:15,name:'ClearLife Clinic',initials:'CL',bgColor:'#0f6e56',category:'hospital',tag:'Hospital & clinic',tagIcon:'ti-heart-rate-monitor',location:'Mumbai'},
+  {id:16,name:'Metro Hospital',initials:'MH',bgColor:'#085041',category:'hospital',tag:'Hospital & institution',tagIcon:'ti-heart-rate-monitor',location:'Thane'},
+  {id:17,name:'Prime Diagnostics',initials:'PD',bgColor:'#1a5fa8',category:'hospital',tag:'Diagnostic centre',tagIcon:'ti-heart-rate-monitor',location:'Pune'}
+];
+
+var activeFilter = 'all';
+
+function filterClients(cat) {
+  activeFilter = cat;
+  var filters = ['all','builder','designer','hotel','office','retail','hospital'];
+  filters.forEach(function(f) {
+    var btn = document.getElementById('filter-' + f);
+    if (!btn) return;
+    if (f === cat) {
+      btn.style.border = '1px solid #1a3a5c'; btn.style.background = '#1a3a5c'; btn.style.color = '#fff';
+    } else {
+      btn.style.border = '1px solid var(--border)'; btn.style.background = '#fff'; btn.style.color = 'var(--text-2)';
+    }
+  });
+  renderClients();
+}
+
+function renderClients() {
+  var filtered = activeFilter === 'all' ? clients : clients.filter(function(c){return c.category === activeFilter;});
+  var grid = document.getElementById('clients-grid');
+  grid.innerHTML = filtered.map(function(c) {
+    return '<div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;border-radius:16px;border:1px solid var(--border);background:#fff;padding:1.25rem;text-align:center;transition:box-shadow 0.3s,transform 0.3s;" onmouseover="this.style.boxShadow=\'var(--shadow-md)\';this.style.transform=\'translateY(-4px)\'" onmouseout="this.style.boxShadow=\'none\';this.style.transform=\'none\'">'
+      + '<div style="width:64px;height:64px;border-radius:12px;background:'+c.bgColor+';color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,0.15);">'+c.initials+'</div>'
+      + '<div style="font-size:0.75rem;font-weight:700;color:var(--text);line-height:1.3;">'+c.name+'</div>'
+      + '<div style="width:100%;display:flex;flex-direction:column;gap:0.5rem;">'
+      + '<div style="display:inline-flex;width:100%;align-items:center;justify-content:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#f9fafb;padding:0.25rem 0.625rem;font-size:0.5625rem;font-weight:600;color:var(--text-2);"><i class="ti '+c.tagIcon+'" style="font-size:0.625rem;"></i> '+c.tag+'</div>'
+      + '<div style="display:flex;align-items:center;justify-content:center;gap:0.25rem;font-size:0.5625rem;font-weight:500;color:var(--text-3);"><i class="ti ti-map-pin" style="font-size:0.625rem;color:var(--primary);"></i> '+c.location+'</div>'
+      + '</div></div>';
+  }).join('');
+}
+
+renderClients();
+</script>
+</body>
+</html>

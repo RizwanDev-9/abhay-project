@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Reviews | GlassQuick</title>
+<meta name="description" content="Real reviews from real GlassQuick customers — mirrors, shower glass, partitions, railings and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--accent-hov:#1565C0;--border:#E0E0E0;--surface:#FFFFFF;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--shadow-md:0 4px 20px rgba(0,0,0,0.10);--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;padding-bottom:3rem;}
+.no-scrollbar::-webkit-scrollbar{display:none;}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+.review-card{border-radius:12px;border:1px solid var(--border);background:#fff;overflow:hidden;transition:box-shadow 0.3s;cursor:pointer;position:relative;}
+.review-card:hover{box-shadow:var(--shadow-md);}
+.delete-btn{position:absolute;top:0.75rem;right:0.75rem;z-index:10;width:32px;height:32px;background:#ef4444;color:#fff;border-radius:50%;display:none;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+.review-card:hover .delete-btn{display:flex;}
+.modal-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.90);align-items:center;justify-content:center;padding:1rem 2.5rem;}
+.modal-overlay.active{display:flex;}
+.modal-inner{position:relative;width:100%;max-width:1100px;max-height:85vh;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 25px 50px rgba(0,0,0,0.5);display:flex;}
+.modal-close{position:absolute;top:1.5rem;right:1.5rem;z-index:110;color:rgba(255,255,255,0.70);background:none;border:none;cursor:pointer;font-size:1.875rem;line-height:1;}
+.modal-close:hover{color:#fff;}
+.filter-tab{font-size:0.875rem;font-weight:500;color:var(--text-2);background:none;border:none;cursor:pointer;position:relative;padding-bottom:4px;transition:color 0.2s;font-family:var(--font-body);}
+.filter-tab.active{color:var(--cta);}
+.filter-tab.active::after{content:'';position:absolute;bottom:-17px;left:0;right:0;height:2px;background:var(--cta);}
+.filter-tab:hover:not(.active){color:var(--text);}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.rating-bar-fill{height:100%;background:#f5a623;border-radius:999px;transition:width 0.5s ease-out;}
+@media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr !important;}.modal-inner{flex-direction:column;}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr !important;}.filter-tabs-wrap{gap:1.5rem !important;}.modal-inner{max-height:95vh;}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:#1a3a5c;padding:4rem 2rem;text-align:center;">
+  <div style="position:absolute;inset:0;opacity:0.10;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 1px,transparent 1px,transparent 24px);"></div>
+  <div style="position:relative;z-index:1;">
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.10);color:#a8d4f5;font-size:0.625rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;padding:0.25rem 0.875rem;border-radius:999px;margin-bottom:1rem;">Website reviews</span>
+    <h1 style="font-family:var(--font-sans);font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:#fff;margin-bottom:0.75rem;">What our customers say</h1>
+    <p style="font-size:0.875rem;line-height:1.7;color:#a8c8e8;max-width:520px;margin:0 auto 2rem;">Real reviews from real customers — from bathroom mirrors to office partitions, here's what people experience with GlassQuick.</p>
+    <a href="/reviews/new" style="display:inline-flex;align-items:center;gap:0.5rem;border-radius:8px;background:var(--cta);padding:0.75rem 1.5rem;font-size:0.875rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 10px 20px rgba(0,0,0,0.15);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='none'"><i class="ti ti-plus"></i> Write a Review</a>
+  </div>
+</section>
+
+<!-- RATING SUMMARY -->
+<section style="padding:3rem 1.5rem;">
+  <div style="max-width:672px;margin:0 auto;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.5rem 2rem;display:flex;flex-wrap:wrap;align-items:center;gap:2rem 3rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+    <div style="text-align:center;flex-shrink:0;">
+      <div id="avg-score" style="font-size:3.75rem;font-weight:700;color:#1a3a5c;margin-bottom:0.5rem;font-family:var(--font-sans);">4.8</div>
+      <div id="avg-stars" style="display:flex;justify-content:center;gap:0.25rem;color:#f5a623;font-size:1.25rem;margin-bottom:0.5rem;"></div>
+      <div id="review-count" style="font-size:0.75rem;color:var(--text-2);margin-bottom:1rem;">Based on 25 reviews</div>
+      <div style="display:inline-flex;align-items:center;gap:0.375rem;border-radius:999px;border:1px solid var(--border);background:#f9fafb;padding:0.25rem 0.75rem;font-size:0.625rem;font-weight:700;color:var(--text-2);"><i class="ti ti-star-filled" style="color:#f5a623;"></i> Website Reviews</div>
+    </div>
+    <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:0.625rem;" id="rating-bars"></div>
+  </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section style="padding:1.5rem 1.5rem 2.5rem;">
+  <div style="max-width:1152px;margin:0 auto;">
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs-wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem;border-bottom:1px solid #f0f0f0;padding-bottom:1rem;margin-bottom:2.5rem;">
+      <button class="filter-tab active" id="tab-all" onclick="setFilter('all')">All Reviews</button>
+      <button class="filter-tab" id="tab-mirrors" onclick="setFilter('mirrors')">Mirrors</button>
+      <button class="filter-tab" id="tab-name-plates" onclick="setFilter('name-plates')">Name Plates</button>
+      <button class="filter-tab" id="tab-shower" onclick="setFilter('shower')">Shower</button>
+      <button class="filter-tab" id="tab-doors-partitions" onclick="setFilter('doors-partitions')">Doors &amp; Partitions</button>
+      <button class="filter-tab" id="tab-windows" onclick="setFilter('windows')">Windows</button>
+      <button class="filter-tab" id="tab-railing" onclick="setFilter('railing')">Railing</button>
+      <button class="filter-tab" id="tab-space-solutions" onclick="setFilter('space-solutions')">Space Solutions</button>
+      <button class="filter-tab" id="tab-home-decor" onclick="setFilter('home-decor')">Home Decor</button>
+      <button class="filter-tab" id="tab-glass-type" onclick="setFilter('glass-type')">Glass Type</button>
+    </div>
+
+    <!-- Photo Gallery Slider -->
+    <div style="position:relative;margin-bottom:1.5rem;">
+      <div id="photo-slider" class="no-scrollbar" style="display:flex;gap:1.5rem;overflow-x:auto;scroll-behavior:smooth;padding-bottom:0.5rem;"></div>
+      <button onclick="scrollGallery(-1)" style="position:absolute;left:-20px;top:50%;transform:translateY(-50%);width:64px;height:64px;background:#fff;border-radius:50%;box-shadow:0 10px 25px rgba(0,0,0,0.15);border:1px solid #f9fafb;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-50%) scale(1.10)'" onmouseout="this.style.transform='translateY(-50%)'"><i class="ti ti-chevron-left" style="font-size:1.875rem;color:var(--text);"></i></button>
+      <button onclick="scrollGallery(1)" style="position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:64px;height:64px;background:#fff;border-radius:50%;box-shadow:0 10px 25px rgba(0,0,0,0.15);border:1px solid #f9fafb;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-50%) scale(1.10)'" onmouseout="this.style.transform='translateY(-50%)'"><i class="ti ti-chevron-right" style="font-size:1.875rem;color:var(--text);"></i></button>
+    </div>
+
+    <!-- Sort Dropdown -->
+    <div style="position:relative;width:100%;margin-bottom:2.5rem;">
+      <div onclick="toggleSort()" style="display:flex;align-items:center;justify-content:space-between;padding:1rem;background:#fff;border:1px solid var(--border);border-radius:12px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--cta)'" onmouseout="this.style.borderColor='var(--border)'">
+        <span id="sort-label" style="font-size:1rem;font-weight:500;color:var(--text);">Most Recent</span>
+        <i id="sort-chevron" class="ti ti-chevron-down" style="color:var(--text-2);font-size:1.25rem;transition:transform 0.3s;"></i>
+      </div>
+      <div id="sort-dropdown" style="display:none;position:absolute;top:calc(100% + 0.5rem);left:0;right:0;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 25px 50px rgba(0,0,0,0.12);z-index:20;overflow:hidden;">
+        <div onclick="setSort('recent','Most Recent')" style="padding:1rem;font-size:1rem;cursor:pointer;color:var(--text);background:#7a7a7a;color:#fff;font-weight:700;" id="sort-recent">Most Recent</div>
+        <div onclick="setSort('top','Top Rated')" style="padding:1rem;font-size:1rem;cursor:pointer;color:var(--text);transition:background 0.2s;" id="sort-top" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='transparent'">Top Rated</div>
+        <div onclick="setSort('images','Image First')" style="padding:1rem;font-size:1rem;cursor:pointer;color:var(--text);transition:background 0.2s;" id="sort-images" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='transparent'">Image First</div>
+        <div onclick="setSort('video','Video First')" style="padding:1rem;font-size:1rem;cursor:pointer;color:var(--text);transition:background 0.2s;" id="sort-video" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='transparent'">Video First</div>
+      </div>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="reviews-grid" id="reviews-grid"></div>
+
+    <!-- Load More -->
+    <div id="load-more-wrap" style="margin-top:3rem;text-align:center;display:none;">
+      <button onclick="loadMore()" style="display:inline-flex;align-items:center;gap:0.5rem;border-radius:8px;background:#1a3a5c;padding:0.75rem 2rem;font-size:0.875rem;font-weight:700;color:#fff;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:background 0.2s;font-family:var(--font-body);" onmouseover="this.style.background='#254a70'" onmouseout="this.style.background='#1a3a5c'">Load More Reviews</button>
+    </div>
+
+    <!-- Write Review CTA -->
+    <div style="margin-top:3rem;text-align:center;background:rgba(249,250,251,0.5);border-radius:16px;padding:2.5rem;border:2px dashed #e5e7eb;">
+      <div style="max-width:448px;margin:0 auto;">
+        <h3 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:#1a3a5c;margin-bottom:0.5rem;">Share your own experience</h3>
+        <p style="font-size:0.875rem;color:var(--text-2);margin-bottom:1.5rem;line-height:1.7;">Bought something from GlassQuick? Help others by sharing your photos and thoughts.</p>
+        <a href="/reviews/new" style="display:inline-flex;align-items:center;gap:0.5rem;border-radius:12px;background:var(--cta);padding:1rem 2rem;font-size:0.875rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 10px 20px rgba(0,0,0,0.12);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'"><i class="ti ti-edit" style="font-size:1.1rem;"></i> Write a Website Review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- LEAVE REVIEW CTA -->
+<section style="padding:3rem 1.5rem 4rem;">
+  <div style="max-width:672px;margin:0 auto;border-radius:16px;border:1px solid #b5d4f4;background:linear-gradient(135deg,#f0f7ff,#e8f4fd);padding:2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+    <h3 style="font-family:var(--font-sans);font-size:1.1rem;font-weight:700;color:#1a3a5c;margin-bottom:0.5rem;">Worked with us? Share your experience</h3>
+    <p style="font-size:0.875rem;line-height:1.7;color:#3a6a9c;margin-bottom:2rem;">Your review helps other customers make confident decisions — and takes less than 2 minutes.</p>
+    <a href="#" style="display:inline-flex;align-items:center;gap:0.5rem;border-radius:8px;background:#fff;border:1px solid #b5d4f4;padding:0.75rem 1.5rem;font-size:0.875rem;font-weight:700;color:#1a3a5c;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.08);transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'"><i class="ti ti-edit"></i> Submit a Website Review</a>
+  </div>
+</section>
+
+<!-- FOOTER BAR -->
+<section style="background:#1a3a5c;padding:3rem 1.5rem;text-align:center;color:#fff;">
+  <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Ready to experience it yourself?</h2>
+  <p style="font-size:0.875rem;color:#a8c8e8;margin-bottom:2rem;">Join 100+ happy customers — book a site visit<br>or place your order today.</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+    <a href="/book-visit" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2b7dd4;color:#fff;font-family:var(--font-body);font-size:0.875rem;font-weight:500;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#256bb8'" onmouseout="this.style.background='#2b7dd4'"><i class="ti ti-map-pin"></i> Book a site visit</a>
+    <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.30);color:#d4eafc;font-family:var(--font-body);font-size:0.875rem;font-weight:500;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'"><i class="ti ti-phone-call"></i> Request a callback</a>
+  </div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<div style="border-top:1px solid var(--border);padding:1.5rem;">
+  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+    <a href="/measurement-visit" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-ruler-measure" style="color:var(--primary);font-size:0.875rem;"></i> Measurement visit</a>
+    <a href="/care-instructions" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-tools" style="color:var(--primary);font-size:0.875rem;"></i> Installation</a>
+    <a href="/bulk-orders" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-building" style="color:var(--primary);font-size:0.875rem;"></i> Bulk orders</a>
+    <a href="/franchise-inquiry" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-building-store" style="color:var(--primary);font-size:0.875rem;"></i> Franchise inquiry</a>
+    <a href="/" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-layout-grid" style="color:var(--primary);font-size:0.875rem;"></i> Products</a>
+  </div>
+</div>
+
+<!-- REVIEW MODAL -->
+<div class="modal-overlay" id="review-modal" onclick="if(event.target===this)closeModal()">
+  <button class="modal-close" onclick="closeModal()"><i class="ti ti-x"></i></button>
+  <div class="modal-inner">
+    <div id="modal-media" style="flex:1;background:#f0f0f0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:300px;"></div>
+    <div id="modal-info" style="width:450px;background:#fff;padding:2.5rem;overflow-y:auto;display:flex;flex-direction:column;"></div>
+  </div>
+</div>
+
+<script>
+var reviews=[
+  {id:1,name:'Aryan',initials:'A',avatarColor:'#1a3a5c',location:'Mumbai',stars:5,text:'Got a full bathroom mirror installed. The technician came on time, measured precisely, and the glass fit perfectly. Finished in under an hour. Very professional team.',category:'mirrors',projectTag:'Custom Backlit Bathroom Mirror',projectIcon:'ti-droplet',date:'April 15, 2026',images:['/images/review1.png','/images/review2.png','/images/review3.png'],recommended:true},
+  {id:2,name:'Priya Shah',initials:'PS',avatarColor:'#0f6e56',location:'Thane',stars:5,text:'The product is good but the installation was delayed by 3 days. Expected better coordination from the team.',category:'doors-partitions',projectTag:'Acoustic Office Glass Partition',projectIcon:'ti-building',date:'March 28, 2026',images:['/images/review2.png','/images/review3.png'],hasVideo:true,recommended:true},
+  {id:3,name:'Aarav Mehta',initials:'AM',avatarColor:'#854f0b',location:'Pune',stars:4.5,text:'Replaced all the window glass in my flat. The 2-step measurement process is genius — the technician caught a sizing issue I would have missed completely. Zero problems on installation day.',category:'windows',projectTag:'Double Glazed Residential Window',projectIcon:'ti-home',date:'February 12, 2026',images:['/images/review3.png','/images/review1.png'],recommended:true},
+  {id:4,name:'Neha Joshi',initials:'NJ',avatarColor:'#534ab7',location:'Mumbai',stars:5,text:'Shower glass enclosure installed last week. The frameless design looks exactly as I imagined. The team cleaned up everything after installation — left no mess at all.',category:'shower',projectTag:'Frameless Shower Glass Enclosure',projectIcon:'ti-droplet',date:'May 15, 2026',images:['/images/review1.png','/images/review2.png'],hasVideo:true,recommended:true},
+  {id:5,name:'Vikram Rao',initials:'VR',avatarColor:'#a32d2d',location:'Navi Mumbai',stars:4.8,text:'Bulk order for our new showroom — 18 glass panels of varying sizes. Every single one fit perfectly. Delivery and installation done in one day as promised. Excellent bulk pricing too.',category:'doors-partitions',projectTag:'Toughened Commercial Glass Panel',projectIcon:'ti-briefcase',date:'January 20, 2026',images:['/images/review2.png'],recommended:true},
+  {id:6,name:'Saira Khan',initials:'SK',avatarColor:'#d97706',location:'Bangalore',stars:5,text:'The glass railing for my balcony is the highlight of my house now. It makes the space look so much bigger and modern. Extremely sturdy build.',category:'railing',projectTag:'Frameless Balcony Glass Railing',projectIcon:'ti-layout-sidebar',date:'May 10, 2026',images:['/images/review3.png','/images/review2.png'],recommended:true},
+  {id:7,name:'Rohan Deshmukh',initials:'RD',avatarColor:'#1e40af',location:'Mumbai',stars:4.2,text:'Installed a sliding glass partition for my studio. Very smooth mechanism. Only downside was the initial measurement visit had to be rescheduled, but the final product is flawless.',category:'space-solutions',projectTag:'Sliding Glass Room Divider',projectIcon:'ti-layout-columns',date:'April 05, 2026',images:['/images/review1.png'],recommended:true},
+  {id:8,name:'Anjali Nair',initials:'AN',avatarColor:'#be185d',location:'Hyderabad',stars:5,text:'Beautiful decorative glass piece for my living room. The texture and clarity are top-notch. It adds a touch of elegance that was missing.',category:'home-decor',projectTag:'Textured Decorative Glass Wall',projectIcon:'ti-palette',date:'May 02, 2026',images:['/images/review2.png','/images/review1.png','/images/review3.png'],recommended:true},
+  {id:9,name:'Karthik S.',initials:'KS',avatarColor:'#047857',location:'Chennai',stars:4.5,text:'The frosted glass for our office cabins provides perfect privacy without blocking the light. Very professional installation team.',category:'glass-type',projectTag:'Frosted Privacy Office Glass',projectIcon:'ti-layers-intersect',date:'March 15, 2026',images:['/images/review3.png'],recommended:true},
+  {id:10,name:'Meera Kapoor',initials:'MK',avatarColor:'#7c3aed',location:'Delhi',stars:5,text:'Ordered a custom LED mirror for my vanity. The touch sensor works perfectly and the brightness is just right. Packaged very securely for shipping.',category:'mirrors',projectTag:'Smart LED Vanity Mirror',projectIcon:'ti-bolt',date:'May 14, 2026',images:['/images/review1.png','/images/review3.png'],recommended:true},
+  {id:11,name:'Rahul V.',initials:'RV',avatarColor:'#2563eb',location:'Mumbai',stars:5,text:'The balcony railing is so strong! I was worried about safety but after seeing the thickness of the glass and the quality of the fixtures, I am very relieved.',category:'railing',projectTag:'High-Strength Glass Balustrade',projectIcon:'ti-shield-check',date:'April 20, 2026',images:['/images/review2.png','/images/review1.png'],hasVideo:true,recommended:true},
+  {id:12,name:'Tanvi Jain',initials:'TJ',avatarColor:'#db2777',location:'Ahmedabad',stars:4.7,text:'Excellent service from start to finish. The sliding windows are extremely quiet and provide great insulation from the street noise.',category:'windows',projectTag:'Soundproof Sliding Window',projectIcon:'ti-volume-off',date:'May 08, 2026',images:['/images/review3.png'],recommended:true},
+  {id:13,name:'Sameer Sheikh',initials:'SS',avatarColor:'#059669',location:'Surat',stars:5,text:'Our shower cubicle looks like it belongs in a 5-star hotel. The hydrophobic coating really works — water just slides off and it stays clean longer.',category:'shower',projectTag:'Easy-Clean Shower Glass',projectIcon:'ti-sparkles',date:'May 11, 2026',images:['/images/review1.png','/images/review2.png'],recommended:true},
+  {id:14,name:'Ishaan Verma',initials:'IV',avatarColor:'#1a3a5c',location:'Bangalore',stars:5,text:'The custom acrylic name plate for our new home is stunning. The gold lettering on glass looks very premium. Highly recommended for home decor!',category:'name-plates',projectTag:'Premium Acrylic Home Name Plate',projectIcon:'ti-home',date:'May 12, 2026',images:['/images/review1.png','/images/review2.png'],hasVideo:true,recommended:true},
+  {id:15,name:'Preeti G.',initials:'PG',avatarColor:'#f59e0b',location:'Mumbai',stars:4.9,text:'I used their space solutions for my home office. The glass partition allows me to have a private workspace without making the living room feel cramped. Amazing idea!',category:'space-solutions',projectTag:'Glass Home-Office Partition',projectIcon:'ti-briefcase',date:'May 05, 2026',images:['/images/review2.png','/images/review3.png'],recommended:true},
+  {id:16,name:'Karan Malhotra',initials:'KM',avatarColor:'#1a3a5c',location:'Gurgaon',stars:5,text:'The glass railing on our staircase is solid as a rock. The finish on the stainless steel fixings is very premium. Worth every penny for the safety and look.',category:'railing',projectTag:'Staircase Glass Balustrade',projectIcon:'ti-stairs',date:'May 16, 2026',images:['/images/review1.png','/images/review2.png'],recommended:true},
+  {id:17,name:'Zoya Fatima',initials:'ZF',avatarColor:'#d97706',location:'Hyderabad',stars:4.5,text:'Ordered a name plate for my parents anniversary. The delivery was slightly late, but the product quality made up for it. The backlight is very bright and clear.',category:'name-plates',projectTag:'Backlit Glass Name Plate',projectIcon:'ti-home',date:'May 12, 2026',images:['/images/review3.png'],recommended:true},
+  {id:18,name:'Nitin Gadkari',initials:'NG',avatarColor:'#047857',location:'Nagpur',stars:5,text:'Excellent windows for our bungalow. The double glazing really cuts out the heat. The team was very professional during the installation process.',category:'windows',projectTag:'Energy Efficient UPVC Windows',projectIcon:'ti-home',date:'May 10, 2026',images:['/images/review2.png','/images/review1.png'],recommended:true},
+  {id:19,name:'Pooja Hegde',initials:'PH',avatarColor:'#be185d',location:'Mumbai',stars:5,text:'The walk-in shower glass is so easy to clean. No water spots even after a month. The frameless look is very modern. Very happy with the purchase.',category:'shower',projectTag:'Walk-in Shower Glass Screen',projectIcon:'ti-droplet',date:'May 09, 2026',images:['/images/review1.png'],hasVideo:true,recommended:true},
+  {id:20,name:'Samar Singh',initials:'SS',avatarColor:'#1e40af',location:'Lucknow',stars:4.8,text:'We used GlassQuick for our entire office partition project. 25 cabins done in 4 days. Unmatchable speed and precision. Highly recommended for commercial work.',category:'doors-partitions',projectTag:'Commercial Office Partitioning',projectIcon:'ti-building',date:'May 07, 2026',images:['/images/review2.png','/images/review3.png'],recommended:true},
+  {id:21,name:'Alisha Khan',initials:'AK',avatarColor:'#7c3aed',location:'Kolkata',stars:5,text:'The decorative mirror in my lobby gets so many compliments. It looks like a piece of art. The packaging was very professional — arrived without a scratch.',category:'mirrors',projectTag:'Venetian Decorative Wall Mirror',projectIcon:'ti-star',date:'May 06, 2026',images:['/images/review3.png','/images/review1.png'],recommended:true},
+  {id:22,name:'Varun Deshmukh',initials:'VD',avatarColor:'#2563eb',location:'Mumbai',stars:4.2,text:'Good quality glass. Used it for my gym mirrors. The reflection is true and the installation was steady. A bit expensive but you get what you pay for.',category:'mirrors',projectTag:'Heavy-Duty Gym Wall Mirror',projectIcon:'ti-barbell',date:'May 04, 2026',images:['/images/review2.png'],recommended:true},
+  {id:23,name:'Shraddha K.',initials:'SK',avatarColor:'#db2777',location:'Pune',stars:5,text:'The lacquered glass for my kitchen backsplash is a game changer. So easy to wipe clean and the color is exactly what I wanted. Beautiful finish.',category:'home-decor',projectTag:'Lacquered Glass Kitchen Backsplash',projectIcon:'ti-tools-kitchen-2',date:'May 03, 2026',images:['/images/review1.png','/images/review2.png'],recommended:true},
+  {id:24,name:'Rishi Kapoor',initials:'RK',avatarColor:'#059669',location:'Chandigarh',stars:4.6,text:'Excellent toughened glass for our storefront. The clarity is amazing. The installation team even worked late to finish the job on time.',category:'glass-type',projectTag:'Toughened Storefront Safety Glass',projectIcon:'ti-building-store',date:'May 01, 2026',images:['/images/review3.png'],recommended:true},
+  {id:25,name:'Ananya Birla',initials:'AB',avatarColor:'#8b5cf6',location:'Mumbai',stars:5,text:'The frosted glass name plate for my boutique is so classy. The etched logo is very sharp. It really elevates the entrance of my store.',category:'name-plates',projectTag:'Etched Logo Glass Name Plate',projectIcon:'ti-briefcase',date:'April 28, 2026',images:['/images/review1.png'],recommended:true}
+];
+
+var activeFilter='all', sortBy='recent', visibleCount=6, activeImgs={}, selectedReview=null;
+
+function starsHtml(n){var h='';for(var i=0;i<5;i++){var f=i<Math.floor(n),hf=!f&&i<Math.ceil(n)&&n%1!==0;h+='<i class="ti '+(f?'ti-star-filled':hf?'ti-star-half-filled':'ti-star')+'"></i>';}return h;}
+
+function getSorted(list){var s=[...list];if(sortBy==='recent')s.sort((a,b)=>new Date(b.date)-new Date(a.date));else if(sortBy==='top')s.sort((a,b)=>b.stars-a.stars);else if(sortBy==='images')s.sort((a,b)=>(b.images?.length||0)-(a.images?.length||0));else if(sortBy==='video')s.sort((a,b)=>(b.hasVideo?1:0)-(a.hasVideo?1:0));return s;}
+
+function getFiltered(){var f=activeFilter==='all'?reviews:reviews.filter(r=>r.category===activeFilter);return getSorted(f);}
+
+function updateStats(){var f=getFiltered();var total=f.length;var avg=total>0?(f.reduce((a,c)=>a+c.stars,0)/total).toFixed(1):'0.0';document.getElementById('avg-score').textContent=avg;document.getElementById('avg-stars').innerHTML=starsHtml(parseFloat(avg));document.getElementById('review-count').textContent='Based on '+total+' '+(activeFilter!=='all'?activeFilter+' ':'')+'reviews';var counts={5:f.filter(r=>r.stars===5).length,4:f.filter(r=>r.stars>=4&&r.stars<5).length,3:f.filter(r=>r.stars>=3&&r.stars<4).length,2:f.filter(r=>r.stars>=2&&r.stars<3).length,1:f.filter(r=>r.stars>=1&&r.stars<2).length};var bars='';[5,4,3,2,1].forEach(function(s){var pct=total>0?(counts[s]/total*100):0;bars+='<div style="display:flex;align-items:center;gap:0.75rem;"><span style="width:2rem;text-align:right;font-size:0.75rem;font-weight:500;color:var(--text-2);">'+s+' ★</span><div style="flex:1;height:8px;background:#f3f4f6;border-radius:999px;overflow:hidden;"><div class="rating-bar-fill" style="width:'+pct+'%"></div></div><span style="width:1.5rem;font-size:0.75rem;color:var(--text-3);">'+counts[s]+'</span></div>';});document.getElementById('rating-bars').innerHTML=bars;}
+
+function buildGallery(){var slider=document.getElementById('photo-slider');slider.innerHTML='';reviews.filter(r=>r.images&&r.images.length>0).forEach(function(r){var d=document.createElement('div');d.style.cssText='position:relative;flex-shrink:0;width:240px;aspect-ratio:4/3;border-radius:2.5rem;overflow:hidden;border:1px solid #f0f0f0;box-shadow:0 1px 3px rgba(0,0,0,0.08);transition:transform 0.3s;cursor:pointer;';d.onmouseover=function(){this.style.transform='scale(1.05)';};d.onmouseout=function(){this.style.transform='none';};d.onclick=function(){openModal(r,0);};d.innerHTML='<img src="'+r.images[0]+'" style="width:100%;height:100%;object-fit:cover;"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.40),transparent);opacity:0;transition:opacity 0.3s;display:flex;align-items:flex-end;padding:1.5rem;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0"><span style="color:#fff;font-size:0.75rem;font-weight:700;">'+r.name+'</span></div>';slider.appendChild(d);});}
+
+function scrollGallery(dir){document.getElementById('photo-slider').scrollBy({left:dir*300,behavior:'smooth'});}
+
+function renderReviews(){var f=getFiltered();var visible=f.slice(0,visibleCount);var grid=document.getElementById('reviews-grid');grid.innerHTML='';visible.forEach(function(r){activeImgs[r.id]=activeImgs[r.id]||0;var imgs=r.images||[];var imgHtml='';if(imgs.length>0){imgHtml='<div style="position:relative;aspect-ratio:4/3;width:100%;background:#f3f4f6;" id="imgwrap-'+r.id+'">';imgHtml+='<img id="mainimg-'+r.id+'" src="'+imgs[activeImgs[r.id]]+'" style="width:100%;height:100%;object-fit:cover;transition:opacity 0.3s;">';if(imgs.length>1){imgHtml+='<button onclick="event.stopPropagation();prevImg('+r.id+')" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);width:40px;height:40px;background:rgba(255,255,255,0.90);border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.12);"><i class="ti ti-chevron-left" style="font-size:1.25rem;"></i></button>';imgHtml+='<button onclick="event.stopPropagation();nextImg('+r.id+')" style="position:absolute;right:0.75rem;top:50%;transform:translateY(-50%);width:40px;height:40px;background:rgba(255,255,255,0.90);border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.12);"><i class="ti ti-chevron-right" style="font-size:1.25rem;"></i></button>';var dots='<div style="position:absolute;bottom:1rem;left:0;right:0;display:flex;justify-content:center;gap:0.375rem;">';imgs.forEach(function(_,i){dots+='<div id="dot-'+r.id+'-'+i+'" style="height:6px;border-radius:999px;background:#fff;transition:width 0.3s;width:'+(i===activeImgs[r.id]?'16px':'6px')+';opacity:'+(i===activeImgs[r.id]?'1':'0.5')+';"></div>';});dots+='</div>';imgHtml+=dots;}if(r.hasVideo){imgHtml+='<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;"><div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.20);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.30);"><i class="ti ti-player-play-filled" style="font-size:1.5rem;color:#fff;"></i></div></div>';}imgHtml+='</div>';}
+var thumbs='';if(imgs.length>1){thumbs='<div class="no-scrollbar" style="display:flex;gap:0.5rem;padding:0.25rem 0;overflow-x:auto;">';imgs.forEach(function(img,i){thumbs+='<div onclick="event.stopPropagation();setImg('+r.id+','+i+')" style="position:relative;aspect-ratio:1/1;width:56px;flex-shrink:0;background:#f3f4f6;overflow:hidden;border-radius:6px;border:2px solid '+(i===activeImgs[r.id]?'var(--cta)':'transparent')+';opacity:'+(i===activeImgs[r.id]?'1':'0.60')+';cursor:pointer;" id="thumb-'+r.id+'-'+i+'"><img src="'+img+'" style="width:100%;height:100%;object-fit:cover;"></div>';});thumbs+='</div>';}
+var card=document.createElement('div');card.className='review-card';card.id='card-'+r.id;card.onclick=function(){openModal(r,activeImgs[r.id]||0);};card.innerHTML='<button class="delete-btn" onclick="event.stopPropagation();deleteReview('+r.id+')" title="Delete Review"><i class="ti ti-trash" style="font-size:0.875rem;"></i></button>'+imgHtml+'<div style="padding:1.5rem;display:flex;flex-direction:column;gap:1rem;"><div><h3 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;">'+r.name+'</h3><div style="font-size:0.875rem;color:var(--text-2);">Reviewed <span style="text-decoration:underline;cursor:pointer;font-weight:500;">'+r.projectTag+'</span></div></div>'+thumbs+'<div style="display:flex;gap:0.25rem;color:#f5a623;font-size:0.75rem;">'+starsHtml(r.stars)+'</div><div><p style="font-size:0.875rem;line-height:1.6;color:var(--text);">'+r.text+'</p><div style="font-size:0.8125rem;color:var(--text-3);margin-top:0.5rem;">'+r.date+'</div></div>'+(r.recommended?'<div style="display:inline-flex;align-items:center;gap:0.375rem;color:#0f6e56;background:#e6f4f1;padding:0.125rem 0.5rem;border-radius:999px;width:fit-content;"><i class="ti ti-thumb-up" style="font-size:0.625rem;"></i><span style="font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Recommended for buy</span></div>':'')+'<div style="padding-top:1rem;border-top:1px solid #f9fafb;display:flex;align-items:center;justify-content:space-between;"><span style="display:flex;align-items:center;gap:0.375rem;border-radius:999px;background:#f9fafb;border:1px solid #f0f0f0;padding:0.25rem 0.625rem;font-size:0.5625rem;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:0.08em;"><i class="ti '+r.projectIcon+'" style="font-size:0.6875rem;"></i> '+r.category+'</span><span style="display:flex;align-items:center;gap:0.25rem;font-size:0.5625rem;font-weight:700;color:#0f6e56;text-transform:uppercase;letter-spacing:0.08em;"><i class="ti ti-circle-check"></i> Verified Review</span></div></div>';grid.appendChild(card);});var lmw=document.getElementById('load-more-wrap');lmw.style.display=visibleCount<f.length?'block':'none';}
+
+function prevImg(id){var r=reviews.find(x=>x.id===id);if(!r)return;var imgs=r.images||[];activeImgs[id]=(activeImgs[id]-1+imgs.length)%imgs.length;updateCardImg(id,imgs);}
+function nextImg(id){var r=reviews.find(x=>x.id===id);if(!r)return;var imgs=r.images||[];activeImgs[id]=(activeImgs[id]+1)%imgs.length;updateCardImg(id,imgs);}
+function setImg(id,i){var r=reviews.find(x=>x.id===id);if(!r)return;activeImgs[id]=i;updateCardImg(id,r.images||[]);}
+function updateCardImg(id,imgs){var mi=document.getElementById('mainimg-'+id);if(mi)mi.src=imgs[activeImgs[id]];imgs.forEach(function(_,i){var d=document.getElementById('dot-'+id+'-'+i);if(d){d.style.width=i===activeImgs[id]?'16px':'6px';d.style.opacity=i===activeImgs[id]?'1':'0.5';}var t=document.getElementById('thumb-'+id+'-'+i);if(t){t.style.borderColor=i===activeImgs[id]?'var(--cta)':'transparent';t.style.opacity=i===activeImgs[id]?'1':'0.60';}});}
+
+function deleteReview(id){if(confirm('Are you sure you want to delete this review?')){reviews=reviews.filter(r=>r.id!==id);renderReviews();updateStats();buildGallery();}}
+function loadMore(){visibleCount+=6;renderReviews();}
+
+function setFilter(f){activeFilter=f;visibleCount=6;document.querySelectorAll('.filter-tab').forEach(function(b){b.classList.remove('active');});document.getElementById('tab-'+f).classList.add('active');renderReviews();updateStats();}
+
+function toggleSort(){var dd=document.getElementById('sort-dropdown');var ch=document.getElementById('sort-chevron');var open=dd.style.display==='block';dd.style.display=open?'none':'block';ch.style.transform=open?'rotate(0deg)':'rotate(180deg)';ch.style.color=open?'var(--text-2)':'var(--cta)';}
+function setSort(s,label){sortBy=s;visibleCount=6;document.getElementById('sort-label').textContent=label;document.getElementById('sort-dropdown').style.display='none';document.getElementById('sort-chevron').style.transform='rotate(0deg)';document.getElementById('sort-chevron').style.color='var(--text-2)';['recent','top','images','video'].forEach(function(x){var el=document.getElementById('sort-'+x);if(el){el.style.background=x===s?'#7a7a7a':'transparent';el.style.color=x===s?'#fff':'var(--text)';el.style.fontWeight=x===s?'700':'400';}});renderReviews();}
+
+function openModal(r,idx){selectedReview={review:r,idx:idx};var imgs=r.images||[];var media=document.getElementById('modal-media');var info=document.getElementById('modal-info');media.innerHTML='';if(imgs.length>0){media.innerHTML='<img id="modal-img" src="'+imgs[idx]+'" style="width:100%;height:100%;object-fit:contain;">';if(imgs.length>1){media.innerHTML+='<button onclick="modalPrev()" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;"><i class="ti ti-chevron-left"></i></button>';media.innerHTML+='<button onclick="modalNext()" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;"><i class="ti ti-chevron-right"></i></button>';var dots='<div style="position:absolute;bottom:1.5rem;left:0;right:0;display:flex;justify-content:center;gap:0.375rem;">';imgs.forEach(function(_,i){dots+='<div id="mdot-'+i+'" onclick="modalGoto('+i+')" style="height:6px;border-radius:999px;cursor:pointer;background:#1a3a5c;transition:width 0.3s;width:'+(i===idx?'20px':'6px')+';opacity:'+(i===idx?'1':'0.30')+';"></div>';});dots+='</div>';media.innerHTML+=dots;}}
+var thumbsHtml='';if(imgs.length>0){thumbsHtml='<div style="display:flex;gap:0.5rem;margin-bottom:1.5rem;margin-top:1rem;">';imgs.forEach(function(img,i){thumbsHtml+='<button onclick="modalGoto('+i+')" style="aspect-ratio:1/1;width:48px;border-radius:6px;overflow:hidden;border:2px solid '+(i===idx?'var(--cta)':'transparent')+';opacity:'+(i===idx?'1':'0.60')+';cursor:pointer;padding:0;" id="mthumb-'+i+'"><img src="'+img+'" style="width:100%;height:100%;object-fit:cover;"></button>';});thumbsHtml+='</div>';}
+info.innerHTML='<div style="margin-bottom:0.5rem;"><h3 style="font-family:var(--font-sans);font-size:1.875rem;font-weight:600;color:var(--text);letter-spacing:-0.02em;">'+r.name+'</h3><div style="font-size:0.875rem;color:var(--text-2);">Reviewed <span style="text-decoration:underline;cursor:pointer;font-weight:500;">'+r.projectTag+'</span></div></div>'+thumbsHtml+'<div style="display:flex;gap:0.25rem;color:#f5a623;font-size:0.75rem;margin-bottom:1rem;">'+starsHtml(r.stars)+'</div><div style="flex:1;"><p style="font-size:0.9375rem;line-height:1.6;color:var(--text);">'+r.text+'</p></div><div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #f0f0f0;"><div style="font-size:0.8125rem;color:var(--text-3);font-weight:500;">'+r.date+'</div></div>';
+document.getElementById('review-modal').classList.add('active');}
+
+function closeModal(){document.getElementById('review-modal').classList.remove('active');}
+function modalPrev(){if(!selectedReview)return;var imgs=selectedReview.review.images||[];selectedReview.idx=(selectedReview.idx-1+imgs.length)%imgs.length;updateModalImg();}
+function modalNext(){if(!selectedReview)return;var imgs=selectedReview.review.images||[];selectedReview.idx=(selectedReview.idx+1)%imgs.length;updateModalImg();}
+function modalGoto(i){if(!selectedReview)return;selectedReview.idx=i;updateModalImg();}
+function updateModalImg(){if(!selectedReview)return;var imgs=selectedReview.review.images||[];var i=selectedReview.idx;var mi=document.getElementById('modal-img');if(mi)mi.src=imgs[i];imgs.forEach(function(_,j){var d=document.getElementById('mdot-'+j);if(d){d.style.width=j===i?'20px':'6px';d.style.opacity=j===i?'1':'0.30';}var t=document.getElementById('mthumb-'+j);if(t){t.style.borderColor=j===i?'var(--cta)':'transparent';t.style.opacity=j===i?'1':'0.60';}});}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+document.addEventListener('click',function(e){var dd=document.getElementById('sort-dropdown');if(dd.style.display==='block'&&!e.target.closest('#sort-dropdown')&&!e.target.closest('[onclick="toggleSort()"]')){dd.style.display='none';document.getElementById('sort-chevron').style.transform='rotate(0deg)';}});
+
+updateStats();buildGallery();renderReviews();
+</script>
+</body>
+</html>

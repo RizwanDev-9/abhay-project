@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exclusive Offers & Discounts | GlassQuick</title>
+<meta name="description" content="Explore GlassQuick's exclusive offers, promo codes, bundle deals, and referral program on premium glass solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--border:#E0E0E0;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;--shadow-md:0 4px 20px rgba(0,0,0,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;padding-bottom:3rem;}
+a{text-decoration:none;color:inherit;}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#1a3a5c,#0f2840);padding:5rem 2rem;text-align:center;}
+.hero-grid{position:absolute;inset:0;opacity:0.10;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 1px,transparent 1px,transparent 24px);}
+.hero-inner{position:relative;z-index:1;}
+.badge-yellow{display:inline-block;border-radius:9999px;border:1px solid rgba(250,204,21,0.30);background:rgba(250,204,21,0.10);padding:0.25rem 0.875rem;font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#facc15;margin-bottom:1rem;}
+.hero h1{font-family:var(--font-sans);font-size:2.5rem;font-weight:900;color:#fff;letter-spacing:-0.02em;margin-bottom:1rem;line-height:1.15;}
+.hero p{max-width:32rem;margin:0 auto;font-size:0.875rem;line-height:1.7;color:#a8c8e8;}
+.section{padding:3rem 1.5rem;}
+.section-wide{max-width:64rem;margin:0 auto;}
+.section-title{font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);text-align:center;margin-bottom:2.5rem;}
+.coupon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.coupon-card{position:relative;overflow:hidden;border-radius:1rem;border:2px dashed var(--border);background:#fff;padding:1.5rem;transition:border-color 0.2s,box-shadow 0.2s;}
+.coupon-card:hover{border-color:rgba(26,79,122,0.40);box-shadow:var(--shadow-md);}
+.coupon-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;}
+.coupon-title{font-size:0.875rem;font-weight:700;color:var(--text);}
+.coupon-discount{font-size:1.5rem;font-weight:900;color:var(--primary);margin-top:0.25rem;}
+.coupon-icon{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:9999px;background:#f0f7ff;color:var(--primary);font-size:1.25rem;flex-shrink:0;}
+.coupon-desc{font-size:0.6875rem;line-height:1.6;color:var(--text-2);margin-bottom:1.5rem;}
+.coupon-footer{display:flex;align-items:center;gap:0.5rem;}
+.coupon-code{flex:1;display:flex;align-items:center;justify-content:center;background:#f9fafb;border:1px solid #f3f4f6;border-radius:0.5rem;padding:0.5rem 1rem;font-family:monospace;font-size:0.875rem;font-weight:700;color:var(--text);letter-spacing:0.1em;}
+.copy-btn{flex-shrink:0;width:6rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;border:none;cursor:pointer;font-size:0.75rem;font-weight:700;font-family:var(--font-body);background:var(--primary);color:#fff;transition:background 0.2s,transform 0.1s;}
+.copy-btn:hover{background:#163f62;}
+.copy-btn.copied{background:#22c55e;}
+.copy-btn:active{transform:scale(0.97);}
+.bundle-section{background:#f0f7ff;padding:4rem 1.5rem;}
+.bundle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:64rem;margin:0 auto;}
+.bundle-card{border-radius:1rem;background:#fff;padding:1.5rem;border:1px solid transparent;box-shadow:0 1px 4px rgba(0,0,0,0.06);transition:border-color 0.2s,box-shadow 0.2s;}
+.bundle-card:hover{border-color:rgba(26,79,122,0.20);box-shadow:var(--shadow-md);}
+.bundle-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
+.bundle-icon{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:0.75rem;background:#f0f7ff;color:var(--primary);font-size:1.5rem;transition:transform 0.2s;}
+.bundle-card:hover .bundle-icon{transform:scale(1.1);}
+.bundle-tag{border-radius:9999px;background:#fef9c3;padding:0.25rem 0.625rem;font-size:0.5625rem;font-weight:700;color:#854d0e;text-transform:uppercase;letter-spacing:0.05em;}
+.bundle-title{font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
+.bundle-items{font-size:0.625rem;color:var(--text-2);margin-bottom:1rem;}
+.bundle-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f9fafb;padding-top:1rem;}
+.bundle-save{font-size:0.875rem;font-weight:700;color:#0f6e56;}
+.bundle-link{font-size:0.625rem;font-weight:700;color:var(--primary);display:flex;align-items:center;gap:0.25rem;}
+.referral-card{max-width:48rem;margin:0 auto;border-radius:1.5rem;border:1px solid #b5d4f4;background:#fff;padding:3rem 2rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);text-align:center;}
+.referral-icon{display:flex;align-items:center;justify-content:center;width:4rem;height:4rem;border-radius:1rem;background:#f0f7ff;color:var(--primary);font-size:1.875rem;margin:0 auto 1.5rem;}
+.referral-title{font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:1rem;}
+.referral-desc{font-size:0.875rem;line-height:1.7;color:var(--text-2);max-width:32rem;margin:0 auto 2rem;}
+.btn-dark{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.75rem;background:#1a3a5c;padding:0.75rem 2rem;font-size:0.875rem;font-weight:700;color:#fff;border:none;cursor:pointer;transition:background 0.2s,box-shadow 0.2s;}
+.btn-dark:hover{background:#0f2840;box-shadow:var(--shadow-md);}
+.tnc-section{background:#f9fafb;padding:3rem 1.5rem;}
+.tnc-inner{max-width:40rem;margin:0 auto;text-align:center;}
+.tnc-title{font-family:var(--font-sans);font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:1.5rem;}
+.tnc-list{list-style:none;text-align:left;}
+.tnc-list li{display:flex;gap:0.75rem;font-size:0.6875rem;color:var(--text-2);line-height:1.7;margin-bottom:0.75rem;}
+.tnc-dot{width:0.375rem;height:0.375rem;border-radius:9999px;background:var(--primary);flex-shrink:0;margin-top:0.375rem;}
+.footer-bar{background:#1a3a5c;padding:3rem 1.5rem;text-align:center;color:#fff;}
+.footer-bar h2{font-family:var(--font-sans);font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;}
+.footer-bar p{font-size:0.875rem;color:#a8c8e8;margin-bottom:2rem;line-height:1.6;}
+.footer-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
+.btn-blue{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.5rem;background:#2b7dd4;padding:0.75rem 1.5rem;font-size:0.875rem;font-weight:500;color:#fff;border:none;cursor:pointer;transition:background 0.2s;text-decoration:none;}
+.btn-blue:hover{background:#256bb8;}
+.btn-outline-white{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.30);padding:0.75rem 1.5rem;font-size:0.875rem;font-weight:500;color:#d4eafc;background:transparent;cursor:pointer;transition:background 0.2s;text-decoration:none;}
+.btn-outline-white:hover{background:rgba(255,255,255,0.05);}
+.bottom-links{border-top:1px solid var(--border);padding:1.5rem 1rem;}
+.bottom-links-inner{max-width:56rem;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;}
+.bottom-link{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;transition:color 0.2s;}
+.bottom-link:hover{color:var(--text);}
+.bottom-link i{font-size:0.875rem;color:var(--primary);}
+@media(max-width:768px){.hero h1{font-size:1.75rem;}.coupon-grid{grid-template-columns:1fr;}.bundle-grid{grid-template-columns:1fr;}.referral-card{padding:2rem 1.25rem;}}
+</style>
+</head>
+<body>
+<section class="hero"><div class="hero-grid"></div><div class="hero-inner"><span class="badge-yellow">Limited Time Deals</span><h1>Exclusive Offers<br>&amp; Discounts</h1><p>Transform your space for less. Explore our current active promo codes, bundle deals, and seasonal offers on premium glass solutions.</p></div></section>
+<section class="section"><div class="section-wide"><h2 class="section-title">Active Promo Codes</h2><div class="coupon-grid"><div class="coupon-card"><div class="coupon-header"><div><div class="coupon-title">First Order Special</div><div class="coupon-discount">10% OFF</div></div><div class="coupon-icon"><i class="ti ti-tag"></i></div></div><p class="coupon-desc">Valid on your first purchase above ₹1,999. Applicable on all mirror and glass categories.</p><div class="coupon-footer"><div class="coupon-code">WELCOME10</div><button class="copy-btn" onclick="copyCode(this,'WELCOME10')">Copy Code</button></div></div><div class="coupon-card"><div class="coupon-header"><div><div class="coupon-title">Bulk Project Deal</div><div class="coupon-discount">₹5,000 OFF</div></div><div class="coupon-icon"><i class="ti ti-tag"></i></div></div><p class="coupon-desc">Flat discount on project orders above ₹50,000. Perfect for offices and builders.</p><div class="coupon-footer"><div class="coupon-code">BULKPRO</div><button class="copy-btn" onclick="copyCode(this,'BULKPRO')">Copy Code</button></div></div></div></div></section>
+<section class="bundle-section"><div style="text-align:center;margin-bottom:3rem;"><h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);">Popular Bundle Deals</h2><p style="font-size:0.75rem;color:var(--text-2);margin-top:0.5rem;">Save more when you buy together</p></div><div class="bundle-grid"><div class="bundle-card"><div class="bundle-card-header"><div class="bundle-icon"><i class="ti ti-droplet"></i></div><span class="bundle-tag">Best Seller</span></div><div class="bundle-title">Bathroom Makeover</div><div class="bundle-items">Mirror + Shelf + Enclosure</div><div class="bundle-footer"><span class="bundle-save">Save 15%</span><a href="#" class="bundle-link">Explore <i class="ti ti-chevron-right"></i></a></div></div><div class="bundle-card"><div class="bundle-card-header"><div class="bundle-icon"><i class="ti ti-building"></i></div><span class="bundle-tag">Pro Choice</span></div><div class="bundle-title">Office Complete</div><div class="bundle-items">Partitions + Desk Glass</div><div class="bundle-footer"><span class="bundle-save">Save 12%</span><a href="#" class="bundle-link">Explore <i class="ti ti-chevron-right"></i></a></div></div><div class="bundle-card"><div class="bundle-card-header"><div class="bundle-icon"><i class="ti ti-home"></i></div><span class="bundle-tag">New Arrival</span></div><div class="bundle-title">Modern Home</div><div class="bundle-items">Mirror + Balcony Glass</div><div class="bundle-footer"><span class="bundle-save">Save ₹2,500</span><a href="#" class="bundle-link">Explore <i class="ti ti-chevron-right"></i></a></div></div></div></section>
+<section class="section"><div class="referral-card"><div class="referral-icon"><i class="ti ti-gift"></i></div><h2 class="referral-title">Refer a friend, get ₹500</h2><p class="referral-desc">Love your new glass? Share the love! Invite your friends to GlassQuick. They get 10% off their first order, and you get a ₹500 credit once they complete their installation.</p><button class="btn-dark">Invite Friends Now <i class="ti ti-arrow-right"></i></button></div></section>
+<section class="tnc-section"><div class="tnc-inner"><h3 class="tnc-title">Terms &amp; Conditions for Offers</h3><ul class="tnc-list"><li><span class="tnc-dot"></span><span>Promo codes cannot be combined with any other active offers or clearance sales.</span></li><li><span class="tnc-dot"></span><span>Referral credits are only valid for 6 months from the date of issuance.</span></li><li><span class="tnc-dot"></span><span>GlassQuick reserves the right to modify or cancel any offer without prior notice.</span></li></ul></div></section>
+<section class="footer-bar"><h2>Don't miss out on these deals</h2><p>Offer prices are valid only for a limited time.<br>Book your measurement visit today.</p><div class="footer-btns"><a href="/" class="btn-blue"><i class="ti ti-shopping-cart"></i> Shop Products</a><a href="/book-visit" class="btn-outline-white"><i class="ti ti-calendar"></i> Book Visit</a></div></section>
+<div class="bottom-links"><div class="bottom-links-inner"><a href="/secure-checkout" class="bottom-link"><i class="ti ti-lock"></i> Secure checkout</a><a href="/warranty" class="bottom-link"><i class="ti ti-shield-check"></i> 1 Year Warranty</a><a href="/reviews" class="bottom-link"><i class="ti ti-star"></i> Reviews</a><a href="/" class="bottom-link"><i class="ti ti-layout-grid"></i> Products</a></div></div>
+<script>
+function copyCode(btn,code){navigator.clipboard.writeText(code).catch(function(){var ta=document.createElement('textarea');ta.value=code;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);});btn.classList.add('copied');btn.innerHTML='<i class="ti ti-check" style="margin-right:0.25rem;"></i> Copied';setTimeout(function(){btn.classList.remove('copied');btn.innerHTML='Copy Code';},2000);}
+</script>
+</body>
+</html>

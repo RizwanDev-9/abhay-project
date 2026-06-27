@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safe & Secure Checkout | GlassQuick</title>
+<meta name="description" content="GlassQuick secure checkout — 256-bit SSL encryption, PCI DSS compliant, multiple payment methods.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--accent-hov:#1565C0;--border:#E0E0E0;--surface:#FFFFFF;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--shadow-md:0 4px 20px rgba(0,0,0,0.10);--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;padding-bottom:3rem;}
+@media(max-width:768px){
+  .security-grid{grid-template-columns:1fr !important;}
+  .payment-grid{grid-template-columns:1fr 1fr !important;}
+  .promise-grid{grid-template-columns:1fr !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:#1a3a5c;padding:4rem 2rem;text-align:center;">
+  <div style="position:absolute;inset:0;opacity:0.10;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 1px,transparent 1px,transparent 24px);"></div>
+  <div style="position:relative;z-index:1;">
+    <div style="width:64px;height:64px;border-radius:16px;background:rgba(255,255,255,0.10);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 20px 40px rgba(0,0,0,0.15);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.20);"><i class="ti ti-lock-square-rounded" style="font-size:1.875rem;"></i></div>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.10);color:#a8d4f5;font-size:0.625rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;padding:0.25rem 0.875rem;border-radius:999px;margin-bottom:1rem;">Payment Security</span>
+    <h1 style="font-family:var(--font-sans);font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:#fff;margin-bottom:0.75rem;">Safe &amp; Secure Checkout</h1>
+    <p style="font-size:0.875rem;line-height:1.7;color:#a8c8e8;max-width:520px;margin:0 auto;">Your privacy and security are our top priorities. Every transaction on GlassQuick is protected by industry-leading encryption and payment protocols.</p>
+  </div>
+</section>
+
+<!-- SECURITY FEATURES -->
+<section style="padding:3rem 1.5rem 4rem;">
+  <div style="max-width:900px;margin:0 auto;">
+    <div class="security-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;">
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#f0f7ff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.875rem;"><i class="ti ti-shield-lock"></i></div>
+        <div>
+          <h3 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">256-Bit SSL Encryption</h3>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">All data transmitted between your browser and our servers is encrypted using standard 256-bit SSL technology.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#f0f7ff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.875rem;"><i class="ti ti-credit-card"></i></div>
+        <div>
+          <h3 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">PCI DSS Compliant</h3>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">We partner with PCI-compliant payment gateways, ensuring your card details are never stored on our servers.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#f0f7ff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.875rem;"><i class="ti ti-user-check"></i></div>
+        <div>
+          <h3 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Verified Transactions</h3>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">Every payment goes through multi-factor authentication (OTP) required by your bank for maximum safety.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- PAYMENT METHODS -->
+<section style="padding:3rem 1.5rem 4rem;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Multiple ways to pay</h2>
+    <p style="font-size:0.75rem;color:var(--text-2);margin-bottom:3rem;">Choose the method that works best for you</p>
+    <div class="payment-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.25rem;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='rgba(26,79,122,0.30)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+        <i class="ti ti-device-mobile" style="font-size:1.5rem;color:var(--text);"></i>
+        <span style="font-size:0.625rem;font-weight:700;color:var(--text-2);line-height:1.4;text-align:center;">UPI (Google Pay, PhonePe)</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.25rem;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='rgba(26,79,122,0.30)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+        <i class="ti ti-credit-card" style="font-size:1.5rem;color:var(--text);"></i>
+        <span style="font-size:0.625rem;font-weight:700;color:var(--text-2);line-height:1.4;text-align:center;">Credit &amp; Debit Cards</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.25rem;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='rgba(26,79,122,0.30)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+        <i class="ti ti-building-bank" style="font-size:1.5rem;color:var(--text);"></i>
+        <span style="font-size:0.625rem;font-weight:700;color:var(--text-2);line-height:1.4;text-align:center;">Net Banking</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;border-radius:12px;border:1px solid var(--border);background:#fff;padding:1.25rem;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='rgba(26,79,122,0.30)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+        <i class="ti ti-calendar-event" style="font-size:1.5rem;color:var(--text);"></i>
+        <span style="font-size:0.625rem;font-weight:700;color:var(--text-2);line-height:1.4;text-align:center;">No-Cost EMI</span>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;opacity:0.60;">
+      <i class="ti ti-brand-visa" style="font-size:1.875rem;"></i>
+      <i class="ti ti-brand-mastercard" style="font-size:1.875rem;"></i>
+      <i class="ti ti-brand-google-pay" style="font-size:1.875rem;"></i>
+      <i class="ti ti-brand-apple-pay" style="font-size:1.875rem;"></i>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section style="background:#f9fafb;padding:4rem 1.5rem;">
+  <div style="max-width:768px;margin:0 auto;">
+    <div style="border-radius:16px;border:1px solid var(--border);background:#fff;padding:2rem 3rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+      <h2 style="font-family:var(--font-sans);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:2rem;">The GlassQuick Payment Promise</h2>
+      <div class="promise-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div>
+          <h4 style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--primary);flex-shrink:0;"></span> No Hidden Charges</h4>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">What you see on the checkout page is what you pay. All taxes and delivery costs are clearly mentioned.</p>
+        </div>
+        <div>
+          <h4 style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--primary);flex-shrink:0;"></span> Instant Confirmation</h4>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">As soon as your payment is successful, you'll receive an instant confirmation via SMS and Email.</p>
+        </div>
+        <div>
+          <h4 style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--primary);flex-shrink:0;"></span> Buyer Protection</h4>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">Your payment is held securely until your order is processed and the measurement visit is scheduled.</p>
+        </div>
+        <div>
+          <h4 style="display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--primary);flex-shrink:0;"></span> Easy Refunds</h4>
+          <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">In case of cancellations, refunds are processed back to the original payment source within 5-7 days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:4rem 1.5rem;">
+  <div style="max-width:672px;margin:0 auto;">
+    <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);text-align:center;margin-bottom:2.5rem;">Payment FAQs</h2>
+    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+
+      <div style="overflow:hidden;border-radius:12px;border:1px solid var(--border);background:#fff;">
+        <button onclick="toggleFaq(this)" style="display:flex;width:100%;align-items:center;justify-content:space-between;padding:1rem;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='none'">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text);">Is it safe to use my credit card on GlassQuick?</span>
+          <i class="ti ti-chevron-down" style="font-size:0.875rem;color:var(--text-3);transition:transform 0.3s;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;border-top:1px solid var(--border);">
+          <p style="padding:1rem;font-size:0.75rem;line-height:1.7;color:var(--text-2);">Yes, it is completely safe. We use encrypted payment gateways that are PCI DSS compliant. Your card details are never stored on our platform.</p>
+        </div>
+      </div>
+
+      <div style="overflow:hidden;border-radius:12px;border:1px solid var(--border);background:#fff;">
+        <button onclick="toggleFaq(this)" style="display:flex;width:100%;align-items:center;justify-content:space-between;padding:1rem;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='none'">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text);">Can I pay using EMI?</span>
+          <i class="ti ti-chevron-down" style="font-size:0.875rem;color:var(--text-3);transition:transform 0.3s;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;border-top:1px solid var(--border);">
+          <p style="padding:1rem;font-size:0.75rem;line-height:1.7;color:var(--text-2);">Yes, we offer both standard and no-cost EMI options on major bank credit cards. You can see the EMI breakdown at the time of checkout.</p>
+        </div>
+      </div>
+
+      <div style="overflow:hidden;border-radius:12px;border:1px solid var(--border);background:#fff;">
+        <button onclick="toggleFaq(this)" style="display:flex;width:100%;align-items:center;justify-content:space-between;padding:1rem;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='none'">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text);">What if my transaction fails but the amount is deducted?</span>
+          <i class="ti ti-chevron-down" style="font-size:0.875rem;color:var(--text-3);transition:transform 0.3s;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;border-top:1px solid var(--border);">
+          <p style="padding:1rem;font-size:0.75rem;line-height:1.7;color:var(--text-2);">Don't worry. This usually happens due to a network glitch. The amount is typically refunded to your bank account automatically within 48-72 hours.</p>
+        </div>
+      </div>
+
+      <div style="overflow:hidden;border-radius:12px;border:1px solid var(--border);background:#fff;">
+        <button onclick="toggleFaq(this)" style="display:flex;width:100%;align-items:center;justify-content:space-between;padding:1rem;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-body);" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='none'">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text);">Do you offer Cash on Delivery (COD)?</span>
+          <i class="ti ti-chevron-down" style="font-size:0.875rem;color:var(--text-3);transition:transform 0.3s;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;border-top:1px solid var(--border);">
+          <p style="padding:1rem;font-size:0.75rem;line-height:1.7;color:var(--text-2);">For custom glass orders, we require a partial or full advance to begin processing. However, for some standard products, COD may be available depending on your location.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER BAR -->
+<section style="background:#1a3a5c;padding:3rem 1.5rem;text-align:center;color:#fff;">
+  <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Ready to checkout?</h2>
+  <p style="font-size:0.875rem;color:#a8c8e8;margin-bottom:2rem;">Shop with confidence knowing your data is safe.<br>Start your glass project today.</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+    <a href="/" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2b7dd4;color:#fff;font-family:var(--font-body);font-size:0.875rem;font-weight:500;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#256bb8'" onmouseout="this.style.background='#2b7dd4'"><i class="ti ti-shopping-cart"></i> Continue Shopping</a>
+    <a href="/contact" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.30);color:#d4eafc;font-family:var(--font-body);font-size:0.875rem;font-weight:500;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'"><i class="ti ti-help"></i> Payment Support</a>
+  </div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<div style="border-top:1px solid var(--border);padding:1.5rem;">
+  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+    <a href="/warranty" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-shield-check" style="color:var(--primary);font-size:0.875rem;"></i> 1 Year Warranty</a>
+    <a href="/cancellation-policy" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-history" style="color:var(--primary);font-size:0.875rem;"></i> Cancellation</a>
+    <a href="/reviews" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-star" style="color:var(--primary);font-size:0.875rem;"></i> Reviews</a>
+    <a href="/" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-layout-grid" style="color:var(--primary);font-size:0.875rem;"></i> Products</a>
+  </div>
+</div>
+
+<script>
+function toggleFaq(btn){
+  var answer=btn.nextElementSibling;
+  var icon=btn.querySelector('i');
+  var isOpen=answer.style.display==='block';
+  answer.style.display=isOpen?'none':'block';
+  icon.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
+}
+</script>
+</body>
+</html>

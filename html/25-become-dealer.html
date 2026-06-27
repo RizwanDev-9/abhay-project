@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a Dealer | GlassQuick</title>
+<meta name="description" content="Join GlassQuick's dealer network. Grow your business with high margins, tech support, and priority logistics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--border:#E0E0E0;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;--shadow-md:0 4px 20px rgba(0,0,0,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;padding-bottom:3rem;}
+a{text-decoration:none;color:inherit;}
+.hero{position:relative;overflow:hidden;background:#1a3a5c;padding:5rem 2rem;text-align:center;}
+.hero-grid{position:absolute;inset:0;opacity:0.10;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.1) 0px,rgba(255,255,255,0.1) 1px,transparent 1px,transparent 24px);}
+.hero-inner{position:relative;z-index:1;}
+.badge-light{display:inline-block;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.10);padding:0.25rem 0.875rem;font-size:0.625rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#a8d4f5;margin-bottom:1rem;}
+.hero h1{font-family:var(--font-sans);font-size:2.25rem;font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.2;}
+.hero p{max-width:36rem;margin:0 auto 2.5rem;font-size:0.875rem;line-height:1.7;color:#a8c8e8;}
+.hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
+.btn-blue{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.5rem;background:#2b7dd4;padding:0.75rem 2rem;font-size:0.875rem;font-weight:700;color:#fff;border:none;cursor:pointer;transition:background 0.2s,box-shadow 0.2s;text-decoration:none;}
+.btn-blue:hover{background:#1f6abc;box-shadow:var(--shadow-md);}
+.btn-outline-white{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.30);padding:0.75rem 2rem;font-size:0.875rem;font-weight:700;color:#d4eafc;background:transparent;cursor:pointer;transition:background 0.2s;text-decoration:none;}
+.btn-outline-white:hover{background:rgba(255,255,255,0.05);}
+.benefits-section{padding:4rem 1.5rem 6rem;}
+.benefits-inner{max-width:64rem;margin:0 auto;}
+.section-heading{font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);text-align:center;margin-bottom:0.5rem;}
+.section-sub{font-size:0.875rem;color:var(--text-2);text-align:center;margin-bottom:4rem;}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.benefit-card{border-radius:1rem;border:1px solid var(--border);background:#fff;padding:1.5rem;transition:border-color 0.2s,box-shadow 0.2s;}
+.benefit-card:hover{border-color:rgba(26,79,122,0.20);box-shadow:var(--shadow-md);}
+.benefit-icon{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:0.75rem;background:#f0f7ff;color:var(--primary);font-size:1.5rem;margin-bottom:1.25rem;transition:transform 0.2s;}
+.benefit-card:hover .benefit-icon{transform:scale(1.1);}
+.benefit-title{font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;}
+.benefit-desc{font-size:0.75rem;line-height:1.6;color:var(--text-2);}
+.eligibility-section{background:#f9fafb;padding:4rem 1.5rem;}
+.eligibility-inner{max-width:56rem;margin:0 auto;}
+.eligibility-card{border-radius:1.5rem;border:1px solid var(--border);background:#fff;padding:2rem 3rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.eligibility-card h2{font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:2rem;}
+.eligibility-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+.eligibility-item{display:flex;gap:1rem;}
+.eligibility-check{display:flex;align-items:center;justify-content:center;width:1.5rem;height:1.5rem;border-radius:9999px;background:#eff6ff;color:var(--primary);font-size:0.875rem;flex-shrink:0;margin-top:0.125rem;}
+.eligibility-title{font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
+.eligibility-desc{font-size:0.75rem;line-height:1.6;color:var(--text-2);}
+.onboarding-section{padding:4rem 1.5rem 6rem;text-align:center;}
+.onboarding-inner{max-width:56rem;margin:0 auto;}
+.onboarding-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative;margin-top:4rem;}
+.onboarding-line{position:absolute;top:2.5rem;left:0;height:2px;width:100%;background:#f3f4f6;z-index:0;display:block;}
+.process-step{display:flex;flex-direction:column;align-items:center;gap:0.75rem;position:relative;z-index:1;}
+.step-circle{display:flex;align-items:center;justify-content:center;width:5rem;height:5rem;border-radius:9999px;background:#fff;border:4px solid #f3f4f6;font-size:1.25rem;font-weight:900;color:#1a3a5c;box-shadow:0 1px 4px rgba(0,0,0,0.08);}
+.step-title{font-size:0.875rem;font-weight:700;color:var(--text);}
+.step-desc{font-size:0.75rem;line-height:1.6;color:var(--text-2);padding:0 0.5rem;}
+.faq-section{background:#f9fafb;padding:4rem 1.5rem;}
+.faq-inner{max-width:40rem;margin:0 auto;}
+.faq-title{font-family:var(--font-sans);font-size:1.25rem;font-weight:700;color:var(--text);text-align:center;margin-bottom:2.5rem;}
+.faq-list{display:flex;flex-direction:column;gap:0.75rem;}
+.faq-item{overflow:hidden;border-radius:0.75rem;border:1px solid var(--border);background:#fff;}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-body);transition:background 0.2s;}
+.faq-btn:hover{background:#f9fafb;}
+.faq-question{font-size:0.75rem;font-weight:700;color:var(--text);}
+.faq-chevron{font-size:0.875rem;color:var(--text-3);transition:transform 0.3s;flex-shrink:0;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease;border-top:0 solid var(--border);}
+.faq-item.open .faq-answer{max-height:10rem;border-top-width:1px;}
+.faq-answer p{padding:1rem;font-size:0.75rem;line-height:1.7;color:var(--text-2);}
+.footer-bar{background:#1a3a5c;padding:4rem 1.5rem;text-align:center;color:#fff;}
+.footer-bar h2{font-family:var(--font-sans);font-size:1.5rem;font-weight:700;margin-bottom:1rem;}
+.footer-bar p{font-size:0.875rem;color:#a8c8e8;margin-bottom:2.5rem;line-height:1.6;}
+.footer-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
+.btn-blue-lg{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.5rem;background:#2b7dd4;padding:1rem 2rem;font-size:0.875rem;font-weight:700;color:#fff;border:none;cursor:pointer;transition:background 0.2s,box-shadow 0.2s;text-decoration:none;}
+.btn-blue-lg:hover{background:#1f6abc;box-shadow:var(--shadow-md);}
+.btn-outline-lg{display:inline-flex;align-items:center;gap:0.5rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.30);padding:1rem 2rem;font-size:0.875rem;font-weight:700;color:#d4eafc;background:transparent;cursor:pointer;transition:background 0.2s;text-decoration:none;}
+.btn-outline-lg:hover{background:rgba(255,255,255,0.05);}
+.bottom-links{border-top:1px solid var(--border);padding:1.5rem 1rem;}
+.bottom-links-inner{max-width:56rem;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;}
+.bottom-link{display:flex;align-items:center;gap:0.375rem;font-size:0.625rem;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;transition:color 0.2s;}
+.bottom-link:hover{color:var(--text);}
+.bottom-link i{color:var(--primary);}
+@media(max-width:900px){.benefits-grid{grid-template-columns:repeat(2,1fr);}.onboarding-grid{grid-template-columns:repeat(2,1fr);}.onboarding-line{display:none;}}
+@media(max-width:600px){.hero h1{font-size:1.75rem;}.benefits-grid{grid-template-columns:1fr;}.eligibility-grid{grid-template-columns:1fr;}.onboarding-grid{grid-template-columns:1fr;}.eligibility-card{padding:1.5rem;}}
+</style>
+</head>
+<body>
+<section class="hero"><div class="hero-grid"></div><div class="hero-inner"><span class="badge-light">Partnership Program</span><h1>Grow your business<br>with GlassQuick</h1><p>Join India's fastest-growing glass installation network. Become an authorized dealer and offer premium, precision-cut glass solutions to your customers with full backend support.</p><div class="hero-btns"><button class="btn-blue">Apply for Dealership</button><button class="btn-outline-white">Download Brochure</button></div></div></section>
+<section class="benefits-section"><div class="benefits-inner"><h2 class="section-heading">Why partner with us?</h2><p class="section-sub">We provide the tools, you drive the growth</p><div class="benefits-grid"><div class="benefit-card"><div class="benefit-icon"><i class="ti ti-chart-arrows"></i></div><div class="benefit-title">High Profit Margins</div><p class="benefit-desc">Competitive B2B pricing and attractive margins on every order, ensuring a sustainable and profitable partnership.</p></div><div class="benefit-card"><div class="benefit-icon"><i class="ti ti-ruler-measure"></i></div><div class="benefit-title">Tech-Led Precision</div><p class="benefit-desc">Access our 2-step measurement technology and precision cutting systems that eliminate rework and site errors.</p></div><div class="benefit-card"><div class="benefit-icon"><i class="ti ti-truck-delivery"></i></div><div class="benefit-title">Priority Logistics</div><p class="benefit-desc">Fast-tracked manufacturing and delivery for dealer orders to help you meet your clients' tight deadlines.</p></div><div class="benefit-card"><div class="benefit-icon"><i class="ti ti-school"></i></div><div class="benefit-title">Sales &amp; Tech Training</div><p class="benefit-desc">Complete training for your staff on glass types, measurements, and sales techniques to maximize conversions.</p></div><div class="benefit-card"><div class="benefit-icon"><i class="ti ti-speakerphone"></i></div><div class="benefit-title">Marketing Support</div><p class="benefit-desc">Get listed as an authorized dealer on our portal and receive physical marketing materials for your store.</p></div><div class="benefit-card"><div class="benefit-icon"><i class="ti ti-headset"></i></div><div class="benefit-title">Dedicated Support</div><p class="benefit-desc">A dedicated relationship manager to handle your queries, bulk quotes, and technical requirements 24/7.</p></div></div></div></section>
+<section class="eligibility-section"><div class="eligibility-inner"><div class="eligibility-card"><h2>Who can join our network?</h2><div class="eligibility-grid"><div class="eligibility-item"><div class="eligibility-check"><i class="ti ti-circle-check"></i></div><div><div class="eligibility-title">Hardware &amp; Glass Stores</div><p class="eligibility-desc">Established retail outlets looking to expand their product catalog with premium glass solutions.</p></div></div><div class="eligibility-item"><div class="eligibility-check"><i class="ti ti-circle-check"></i></div><div><div class="eligibility-title">Interior Design Firms</div><p class="eligibility-desc">Firms that want to provide a seamless 'design-to-installation' experience for their residential and office projects.</p></div></div><div class="eligibility-item"><div class="eligibility-check"><i class="ti ti-circle-check"></i></div><div><div class="eligibility-title">Architectural Consultants</div><p class="eligibility-desc">Consultants who require reliable, certified glass partners for large-scale building and construction projects.</p></div></div><div class="eligibility-item"><div class="eligibility-check"><i class="ti ti-circle-check"></i></div><div><div class="eligibility-title">Home Decor Studios</div><p class="eligibility-desc">Studios specializing in premium home aesthetics who want to offer custom mirror and glass designs.</p></div></div></div></div></div></section>
+<section class="onboarding-section"><div class="onboarding-inner"><h2 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);">Simple Onboarding Process</h2><div class="onboarding-grid"><span class="onboarding-line"></span><div class="process-step"><div class="step-circle">01</div><div class="step-title">Apply</div><p class="step-desc">Fill the dealership form with your business details.</p></div><div class="process-step"><div class="step-circle">02</div><div class="step-title">Verify</div><p class="step-desc">Our team reviews your application and site location.</p></div><div class="process-step"><div class="step-circle">03</div><div class="step-title">Onboard</div><p class="step-desc">Complete documentation and receive your dealer kit.</p></div><div class="process-step"><div class="step-circle">04</div><div class="step-title">Start</div><p class="step-desc">Begin placing orders and growing your business.</p></div></div></div></section>
+<section class="faq-section"><div class="faq-inner"><h2 class="faq-title">Partnership FAQs</h2><div class="faq-list"><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-question">Is there any joining fee to become a dealer?</span><i class="ti ti-chevron-down faq-chevron"></i></button><div class="faq-answer"><p>No, there is no upfront joining fee. However, we do look for partners who have an existing business footprint and a commitment to quality service.</p></div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-question">Does GlassQuick handle the installation for dealer orders?</span><i class="ti ti-chevron-down faq-chevron"></i></button><div class="faq-answer"><p>We offer both options. You can either use your own installation team (after training) or leverage our professional installation network.</p></div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-question">What is the average turnaround time for dealer orders?</span><i class="ti ti-chevron-down faq-chevron"></i></button><div class="faq-answer"><p>Dealer orders are prioritized. Standard glass orders are typically processed within 3-5 days, while custom/toughened glass takes 5-7 days.</p></div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-question">Do I get a dedicated portal for order tracking?</span><i class="ti ti-chevron-down faq-chevron"></i></button><div class="faq-answer"><p>Yes, all authorized dealers get access to our B2B dashboard to place orders, track shipments, and manage invoices seamlessly.</p></div></div></div></div></section>
+<section class="footer-bar"><h2>Ready to take the next step?</h2><p>Join a community of 50+ successful dealers across India.<br>Let's build something great together.</p><div class="footer-btns"><button class="btn-blue-lg"><i class="ti ti-mail-forward"></i> Contact Partnership Team</button><button class="btn-outline-lg"><i class="ti ti-brand-whatsapp"></i> Chat with Us</button></div></section>
+<div class="bottom-links"><div class="bottom-links-inner"><a href="/clients" class="bottom-link"><i class="ti ti-building-community"></i> Our clients</a><a href="/bulk-orders" class="bottom-link"><i class="ti ti-building"></i> Bulk orders</a><a href="/offers" class="bottom-link"><i class="ti ti-tag"></i> Offers</a><a href="/franchise-inquiry" class="bottom-link"><i class="ti ti-building-store"></i> Franchise inquiry</a><a href="/" class="bottom-link"><i class="ti ti-layout-grid"></i> Products</a></div></div>
+<script>function toggleFaq(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open');});if(!isOpen){item.classList.add('open');}}</script>
+</body>
+</html>

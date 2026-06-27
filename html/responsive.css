@@ -1,0 +1,248 @@
+/* ── SHARED RESPONSIVE CSS FOR ALL GLASSQUICK HTML PAGES ── */
+
+/* ── TABLET (max 900px) ── */
+@media (max-width: 900px) {
+  /* 2-col grids → 1 col */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:1fr 300px"],
+  [style*="grid-template-columns: 1fr 300px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Toughened section 2-col */
+  .toughened-grid,
+  [style*="grid-template-columns:1fr 1fr;gap:2.5rem"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About mission 2-col */
+  [style*="grid-template-columns:1fr 1fr;gap:4rem"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Contact page sidebar goes below form */
+  [style*="grid-template-columns:1fr 300px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Book visit sidebar */
+  [style*="grid-template-columns:1fr 300px;gap:2rem"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Franchise form 2-col */
+  [style*="grid-template-columns:1fr 1fr;gap:3rem"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ── MOBILE (max 600px) ── */
+@media (max-width: 600px) {
+  /* Hero padding */
+  section[style*="padding:4rem 2rem"],
+  section[style*="padding:5rem 2rem"],
+  section[style*="padding:6rem 2rem"] {
+    padding: 3rem 1rem !important;
+  }
+
+  /* General section padding */
+  section[style*="padding:4rem 1.5rem"],
+  section[style*="padding:3rem 1.5rem"],
+  section[style*="padding:5rem 1.5rem"] {
+    padding: 2rem 1rem !important;
+  }
+
+  /* All grids → 1 col on mobile */
+  [style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Comparison cards — 2 per row on mobile */
+  .comparison-grid {
+    gap: 0.75rem !important;
+  }
+  .comparison-grid > div {
+    width: calc(50% - 0.375rem) !important;
+  }
+
+  /* Use case grid — 2 col on mobile */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Time slots — 2 col */
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Hero h1 font size */
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+
+  /* Horizontal timeline → vertical */
+  [style*="display:flex;align-items:flex-start"] {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Notes grid 2-col → 1-col */
+  [style*="grid-template-columns:1fr 1fr;gap:1rem"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer links wrap */
+  [style*="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem"] {
+    gap: 1rem !important;
+  }
+
+  /* Stat cards */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))"],
+  [style*="grid-template-columns:repeat(auto-fill,minmax(160px,1fr))"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Divider margins */
+  hr[style*="margin:0 1.5rem"] {
+    margin: 0 0.5rem !important;
+  }
+
+  /* Max width containers */
+  [style*="max-width:900px"],
+  [style*="max-width:768px"],
+  [style*="max-width:672px"],
+  [style*="max-width:560px"] {
+    max-width: 100% !important;
+  }
+
+  /* Form grids → 1 col */
+  [style*="display:grid;grid-template-columns:1fr 1fr;gap:1rem"],
+  [style*="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Padding adjustments */
+  [style*="padding:2rem"] {
+    padding: 1.25rem !important;
+  }
+  [style*="padding:2.5rem"] {
+    padding: 1.5rem !important;
+  }
+
+  /* Tab buttons wrap */
+  [style*="display:inline-flex;padding:0.25rem"] {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  /* Warranty tab buttons */
+  [style*="flex:1;min-width:200px"] {
+    min-width: unset !important;
+    width: 100% !important;
+  }
+
+  /* Calendar grid stays 7 col */
+  [style*="display:grid;grid-template-columns:repeat(7,1fr)"] {
+    grid-template-columns: repeat(7, 1fr) !important;
+  }
+
+  /* USP grid → 2 col */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Feature cards → 1 col */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))"],
+  [style*="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Bulk orders quality section */
+  [style*="grid-template-columns:1fr 1fr;gap:3rem"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* About stats */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Franchise form left+right → stack */
+  [style*="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:flex-start"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ── SPECIFIC PAGE FIXES ── */
+
+/* 11-contact: sidebar below form on mobile */
+@media (max-width: 900px) {
+  /* Contact page grid */
+  div[style*="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 300px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Book visit grid */
+  div[style*="display:grid;grid-template-columns:1fr 300px;gap:2rem"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Bulk orders quality section */
+  div[style*="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  /* About mission section */
+  div[style*="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  /* Toughened glass section */
+  div[style*="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Warranty covered/not covered */
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:3rem"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  /* Franchise form */
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:flex-start"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  /* Care instructions do/don't */
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:4rem"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Eligibility cards */
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── SMALL MOBILE (max 400px) ── */
+@media (max-width: 400px) {
+  /* Comparison cards → 1 col */
+  .comparison-grid > div {
+    width: 100% !important;
+  }
+
+  /* Use case → 1 col */
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Time slots → 2 col */
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Hero pills wrap */
+  [style*="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem"] {
+    gap: 0.5rem !important;
+  }
+}

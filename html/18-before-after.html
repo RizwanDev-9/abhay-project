@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before & After Projects | GlassQuick</title>
+<meta name="description" content="See the stunning difference GlassQuick makes. Drag the slider on each project to reveal the transformation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--accent-hov:#1565C0;--border:#E0E0E0;--surface:#FFFFFF;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--shadow-md:0 4px 20px rgba(0,0,0,0.10);--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;}
+.slider-container{position:relative;width:100%;overflow:hidden;border-radius:12px;background:#e5e7eb;height:280px;cursor:ew-resize;user-select:none;}
+.slider-container img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.slider-before{position:absolute;inset:0;}
+.slider-before img{width:100%;height:100%;object-fit:cover;}
+.slider-before-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.30);}
+.slider-before-label{position:absolute;bottom:1rem;left:1rem;border-radius:8px;background:rgba(0,0,0,0.70);color:#fff;font-size:0.75rem;font-weight:700;padding:0.375rem 0.75rem;backdrop-filter:blur(4px);}
+.slider-after{position:absolute;inset:0;}
+.slider-after img{width:100%;height:100%;object-fit:cover;}
+.slider-after-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.05);}
+.slider-after-label{position:absolute;bottom:1rem;right:1rem;border-radius:8px;background:rgba(255,255,255,0.90);color:#1f2937;font-size:0.75rem;font-weight:700;padding:0.375rem 0.75rem;backdrop-filter:blur(4px);}
+.slider-divider{position:absolute;top:0;bottom:0;width:4px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,0.5);transform:translateX(-50%);}
+.slider-handle{position:absolute;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 10px 25px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;z-index:10;ring:4px solid rgba(26,79,122,0.30);}
+.slider-hint{position:absolute;top:1rem;left:0;right:0;display:flex;justify-content:center;pointer-events:none;}
+.slider-hint span{border-radius:999px;background:rgba(0,0,0,0.50);color:#fff;font-size:0.625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.375rem 1rem;backdrop-filter:blur(4px);}
+.project-card{overflow:hidden;border-radius:16px;border:1px solid var(--border);background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:transform 0.3s,box-shadow 0.3s;}
+.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
+@media(max-width:900px){
+  .projects-grid{grid-template-columns:1fr 1fr !important;}
+  .process-grid{grid-template-columns:1fr 1fr !important;}
+}
+@media(max-width:600px){
+  .projects-grid{grid-template-columns:1fr !important;}
+  .stats-grid{grid-template-columns:1fr 1fr !important;}
+  .process-grid{grid-template-columns:1fr 1fr !important;}
+  .cat-buttons{gap:0.5rem !important;}
+  .cat-btn{padding:0.5rem 1rem !important;font-size:0.75rem !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:var(--primary);padding:4rem 2rem;text-align:center;">
+  <div style="position:absolute;inset:0;opacity:0.10;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.3) 0px,rgba(255,255,255,0.3) 1px,transparent 1px,transparent 24px);"></div>
+  <div style="position:relative;z-index:1;">
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,0.20);background:rgba(255,255,255,0.10);color:#a8d4f5;font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;padding:0.375rem 1rem;border-radius:999px;margin-bottom:1rem;">Real Transformations</span>
+    <h1 style="font-family:var(--font-sans);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#fff;margin-bottom:0.75rem;">Before &amp; After Projects</h1>
+    <p style="font-size:0.875rem;line-height:1.7;color:#a8c8e8;max-width:360px;margin:0 auto;">See the stunning difference GlassQuick makes. Drag the slider on each project to reveal the transformation.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="border-bottom:1px solid var(--border);background:rgba(249,250,251,0.5);padding:3rem 1.5rem 4rem;">
+  <div style="max-width:1152px;margin:0 auto;">
+    <div class="stats-grid">
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(26,79,122,0.10);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin:0 auto 0.75rem;"><i class="ti ti-building"></i></div>
+        <div style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--primary);">500+</div>
+        <div style="font-size:0.75rem;color:var(--text-2);font-weight:500;">Projects Completed</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(26,79,122,0.10);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin:0 auto 0.75rem;"><i class="ti ti-map-pin"></i></div>
+        <div style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--primary);">15+</div>
+        <div style="font-size:0.75rem;color:var(--text-2);font-weight:500;">Cities Served</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(26,79,122,0.10);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin:0 auto 0.75rem;"><i class="ti ti-heart"></i></div>
+        <div style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--primary);">98%</div>
+        <div style="font-size:0.75rem;color:var(--text-2);font-weight:500;">Client Satisfaction</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(26,79,122,0.10);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin:0 auto 0.75rem;"><i class="ti ti-award"></i></div>
+        <div style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--primary);">5 Yrs</div>
+        <div style="font-size:0.75rem;color:var(--text-2);font-weight:500;">Of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- CATEGORY + PROJECTS -->
+<section style="padding:4rem 1.5rem 5rem;">
+  <div style="max-width:1152px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span style="display:inline-block;border:1px solid rgba(26,79,122,0.20);background:rgba(26,79,122,0.05);color:var(--primary);font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;padding:0.375rem 1rem;border-radius:999px;margin-bottom:0.75rem;">Browse by Category</span>
+      <h2 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Explore Our Project Types</h2>
+      <p style="font-size:0.875rem;color:var(--text-2);max-width:520px;margin:0 auto;">Filter by project type to see transformations that match your needs</p>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="cat-buttons" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-bottom:3rem;">
+      <button class="cat-btn" id="cat-All" onclick="filterProjects('All')" style="border-radius:999px;padding:0.625rem 1.5rem;font-size:0.875rem;font-weight:700;background:var(--primary);color:#fff;border:none;cursor:pointer;box-shadow:var(--shadow-md);font-family:var(--font-body);transition:all 0.2s;">All</button>
+      <button class="cat-btn" id="cat-Glass Partition" onclick="filterProjects('Glass Partition')" style="border-radius:999px;padding:0.625rem 1.5rem;font-size:0.875rem;font-weight:700;background:#fff;color:var(--text-2);border:1px solid var(--border);cursor:pointer;font-family:var(--font-body);transition:all 0.2s;">Glass Partition</button>
+      <button class="cat-btn" id="cat-Mirror" onclick="filterProjects('Mirror')" style="border-radius:999px;padding:0.625rem 1.5rem;font-size:0.875rem;font-weight:700;background:#fff;color:var(--text-2);border:1px solid var(--border);cursor:pointer;font-family:var(--font-body);transition:all 0.2s;">Mirror</button>
+      <button class="cat-btn" id="cat-Shower Enclosure" onclick="filterProjects('Shower Enclosure')" style="border-radius:999px;padding:0.625rem 1.5rem;font-size:0.875rem;font-weight:700;background:#fff;color:var(--text-2);border:1px solid var(--border);cursor:pointer;font-family:var(--font-body);transition:all 0.2s;">Shower Enclosure</button>
+      <button class="cat-btn" id="cat-Glass Door" onclick="filterProjects('Glass Door')" style="border-radius:999px;padding:0.625rem 1.5rem;font-size:0.875rem;font-weight:700;background:#fff;color:var(--text-2);border:1px solid var(--border);cursor:pointer;font-family:var(--font-body);transition:all 0.2s;">Glass Door</button>
+      <button class="cat-btn" id="cat-Balcony Railing" onclick="filterProjects('Balcony Railing')" style="border-radius:999px;padding:0.625rem 1.5rem;font-size:0.875rem;font-weight:700;background:#fff;color:var(--text-2);border:1px solid var(--border);cursor:pointer;font-family:var(--font-body);transition:all 0.2s;">Balcony Railing</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- HOW IT WORKS -->
+<section style="background:rgba(249,250,251,0.5);padding:4rem 1.5rem 5rem;">
+  <div style="max-width:1152px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <h2 style="font-family:var(--font-sans);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">Our Process</h2>
+      <p style="font-size:0.875rem;color:var(--text-2);">From site visit to stunning installation — here's how we work</p>
+    </div>
+    <div class="process-grid">
+      <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;box-shadow:var(--shadow-md);"><i class="ti ti-calendar"></i></div>
+        <span style="position:absolute;top:-0.5rem;right:-0.5rem;font-size:0.75rem;font-weight:900;color:rgba(26,79,122,0.20);font-family:var(--font-sans);">01</span>
+        <h4 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Book a Visit</h4>
+        <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">Schedule a free site measurement with our expert team.</p>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;box-shadow:var(--shadow-md);"><i class="ti ti-ruler"></i></div>
+        <span style="position:absolute;top:-0.5rem;right:-0.5rem;font-size:0.75rem;font-weight:900;color:rgba(26,79,122,0.20);font-family:var(--font-sans);">02</span>
+        <h4 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Custom Design</h4>
+        <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">We create a layout tailored to your space and needs.</p>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;box-shadow:var(--shadow-md);"><i class="ti ti-tools"></i></div>
+        <span style="position:absolute;top:-0.5rem;right:-0.5rem;font-size:0.75rem;font-weight:900;color:rgba(26,79,122,0.20);font-family:var(--font-sans);">03</span>
+        <h4 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Installation</h4>
+        <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">Professional fitting by certified GlassQuick technicians.</p>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;box-shadow:var(--shadow-md);"><i class="ti ti-star"></i></div>
+        <span style="position:absolute;top:-0.5rem;right:-0.5rem;font-size:0.75rem;font-weight:900;color:rgba(26,79,122,0.20);font-family:var(--font-sans);">04</span>
+        <h4 style="font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">Enjoy &amp; Review</h4>
+        <p style="font-size:0.75rem;line-height:1.6;color:var(--text-2);">Love your new space and share your experience with us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="border:none;border-top:1px solid var(--border);margin:0 1.5rem;">
+
+<!-- CTA -->
+<section style="background:var(--primary);padding:4rem 2rem;text-align:center;color:#fff;">
+  <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Ready for Your Transformation?</h2>
+  <p style="font-size:0.875rem;color:#a8c8e8;margin-bottom:2rem;">Get a free site visit and quote from GlassQuick experts today.</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+    <a href="/book-visit" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;color:var(--primary);font-family:var(--font-body);font-size:0.875rem;font-weight:700;padding:0.875rem 2rem;border-radius:999px;text-decoration:none;box-shadow:var(--shadow-md);transition:background 0.2s;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='#fff'"><i class="ti ti-calendar"></i> Book Free Visit</a>
+    <a href="/reviews" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.30);color:#fff;font-family:var(--font-body);font-size:0.875rem;font-weight:700;padding:0.875rem 2rem;border-radius:999px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.10)'" onmouseout="this.style.background='transparent'"><i class="ti ti-star"></i> See Reviews</a>
+  </div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<div style="border-top:1px solid var(--border);padding:2rem 1.5rem;">
+  <div style="max-width:1152px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+    <a href="/reviews" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-star" style="color:var(--primary);font-size:0.875rem;"></i> Customer Reviews</a>
+    <a href="/book-visit" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-calendar" style="color:var(--primary);font-size:0.875rem;"></i> Book a Visit</a>
+    <a href="/warranty" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-shield-check" style="color:var(--primary);font-size:0.875rem;"></i> Warranty</a>
+    <a href="/size-guide" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-2)'"><i class="ti ti-ruler-2" style="color:var(--primary);font-size:0.875rem;"></i> Size Guide</a>
+  </div>
+</div>
+
+<script>
+var projects = [
+  {id:1,title:'Living Room Glass Partition',location:'Andheri West, Mumbai',category:'Glass Partition',image:'/images/review1.png',beforeLabel:'Plain Wall',afterLabel:'Frameless Glass Partition',tag:'Frameless',tagColor:'#1a3a5c'},
+  {id:2,title:'Master Bath Shower Enclosure',location:'Powai, Mumbai',category:'Shower Enclosure',image:'/images/review2.png',beforeLabel:'Open Shower Area',afterLabel:'8mm Toughened Glass',tag:'8mm Glass',tagColor:'#0f6e56'},
+  {id:3,title:'Office Cabin Glass Door',location:'BKC, Mumbai',category:'Glass Door',image:'/images/review3.png',beforeLabel:'Wooden Door',afterLabel:'Frameless Glass Door',tag:'Frosted',tagColor:'#7c3aed'},
+  {id:4,title:'Bedroom Full-Length Mirror',location:'Thane West',category:'Mirror',image:'/images/review1.png',beforeLabel:'Empty Wall',afterLabel:'Premium Wall Mirror',tag:'Silver Mirror',tagColor:'#78716c'},
+  {id:5,title:'Balcony Glass Railing',location:'Worli, Mumbai',category:'Balcony Railing',image:'/images/review2.png',beforeLabel:'Metal Grille Railing',afterLabel:'Toughened Glass Railing',tag:'12mm Clear',tagColor:'#0369a1'},
+  {id:6,title:'Kitchen Partition',location:'Goregaon East, Mumbai',category:'Glass Partition',image:'/images/review3.png',beforeLabel:'Open Kitchen',afterLabel:'Printed Glass Partition',tag:'Printed Glass',tagColor:'#d97706'}
+];
+
+var activeCategory = 'All';
+var sliders = {};
+
+function filterProjects(cat) {
+  activeCategory = cat;
+  var cats = ['All','Glass Partition','Mirror','Shower Enclosure','Glass Door','Balcony Railing'];
+  cats.forEach(function(c) {
+    var btn = document.getElementById('cat-' + c);
+    if (!btn) return;
+    if (c === cat) {
+      btn.style.background = 'var(--primary)'; btn.style.color = '#fff';
+      btn.style.border = 'none'; btn.style.boxShadow = 'var(--shadow-md)';
+    } else {
+      btn.style.background = '#fff'; btn.style.color = 'var(--text-2)';
+      btn.style.border = '1px solid var(--border)'; btn.style.boxShadow = 'none';
+    }
+  });
+  renderProjects();
+}
+
+function renderProjects() {
+  var filtered = activeCategory === 'All' ? projects : projects.filter(function(p){return p.category === activeCategory;});
+  var grid = document.getElementById('projects-grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:5rem 0;text-align:center;color:var(--text-3);"><i class="ti ti-mood-empty" style="font-size:3rem;display:block;margin-bottom:1rem;"></i><p style="font-size:0.875rem;">No projects found in this category.</p></div>';
+    return;
+  }
+  grid.innerHTML = filtered.map(function(p) {
+    return '<div class="project-card" id="card-'+p.id+'">'
+      + '<div class="slider-container" id="slider-'+p.id+'" onmousedown="startDrag(event,'+p.id+')" ontouchstart="startDragTouch(event,'+p.id+')">'
+      + '<div class="slider-before"><img src="'+p.image+'" alt="Before"><div class="slider-before-overlay"></div><span class="slider-before-label">← BEFORE: '+p.beforeLabel+'</span></div>'
+      + '<div class="slider-after" id="after-'+p.id+'" style="clip-path:inset(0 50% 0 0)"><img src="'+p.image+'" alt="After"><div class="slider-after-overlay"></div><span class="slider-after-label">AFTER: '+p.afterLabel+' →</span></div>'
+      + '<div class="slider-divider" id="div-'+p.id+'" style="left:50%"></div>'
+      + '<div class="slider-handle" id="handle-'+p.id+'" style="left:50%" onmousedown="startDrag(event,'+p.id+')" ontouchstart="startDragTouch(event,'+p.id+')"><i class="ti ti-arrows-left-right" style="font-size:1.1rem;color:var(--primary);"></i></div>'
+      + '<div class="slider-hint" id="hint-'+p.id+'"><span>← Drag to Compare →</span></div>'
+      + '</div>'
+      + '<div style="padding:1.25rem;">'
+      + '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem;">'
+      + '<div><h3 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:700;color:var(--text);line-height:1.3;">'+p.title+'</h3>'
+      + '<div style="display:flex;align-items:center;gap:0.375rem;font-size:0.75rem;color:var(--text-3);margin-top:0.5rem;"><i class="ti ti-map-pin" style="color:var(--primary);"></i>'+p.location+'</div></div>'
+      + '<span style="flex-shrink:0;border-radius:999px;padding:0.25rem 0.75rem;font-size:0.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#fff;white-space:nowrap;background:'+p.tagColor+'">'+p.tag+'</span>'
+      + '</div></div></div>';
+  }).join('');
+  // Init sliders
+  filtered.forEach(function(p){ sliders[p.id] = 50; });
+}
+
+var dragging = null;
+
+function startDrag(e, id) {
+  e.preventDefault();
+  dragging = id;
+  document.addEventListener('mousemove', onDrag);
+  document.addEventListener('mouseup', stopDrag);
+}
+
+function startDragTouch(e, id) {
+  dragging = id;
+  document.addEventListener('touchmove', onDragTouch, {passive:false});
+  document.addEventListener('touchend', stopDrag);
+}
+
+function onDrag(e) {
+  if (!dragging) return;
+  updateSlider(dragging, e.clientX);
+}
+
+function onDragTouch(e) {
+  if (!dragging) return;
+  e.preventDefault();
+  updateSlider(dragging, e.touches[0].clientX);
+}
+
+function stopDrag() {
+  dragging = null;
+  document.removeEventListener('mousemove', onDrag);
+  document.removeEventListener('mouseup', stopDrag);
+  document.removeEventListener('touchmove', onDragTouch);
+  document.removeEventListener('touchend', stopDrag);
+}
+
+function updateSlider(id, clientX) {
+  var container = document.getElementById('slider-' + id);
+  if (!container) return;
+  var rect = container.getBoundingClientRect();
+  var x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+  var pct = (x / rect.width) * 100;
+  sliders[id] = pct;
+  document.getElementById('after-' + id).style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+  document.getElementById('div-' + id).style.left = pct + '%';
+  document.getElementById('handle-' + id).style.left = pct + '%';
+  var hint = document.getElementById('hint-' + id);
+  if (hint) hint.style.display = 'none';
+}
+
+renderProjects();
+</script>
+</body>
+</html>

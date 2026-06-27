@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popular Searches | GlassQuick</title>
+<meta name="description" content="Popular searches on GlassQuick — mirrors, glass types, applications, service areas and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+:root{--primary:#1A4F7A;--secondary:#0992C2;--cta:#1E88E5;--accent:#00A8A8;--accent-hov:#1565C0;--border:#E0E0E0;--surface:#FFFFFF;--text:#1A1A1A;--text-2:#555555;--text-3:#888888;--shadow-md:0 4px 20px rgba(0,0,0,0.10);--font-sans:'Poppins',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);color:var(--text);background:#fff;min-height:100vh;padding-bottom:5rem;}
+input:focus{outline:none;box-shadow:0 0 0 2px rgba(26,79,122,0.20);}
+.section-content{overflow:hidden;transition:max-height 0.3s ease-in-out,opacity 0.3s ease-in-out;max-height:0;opacity:0;}
+.section-content.open{max-height:500px;opacity:1;padding-bottom:1.5rem;}
+.search-link{font-size:0.8125rem;color:var(--text-2);text-decoration:none;line-height:1.7;transition:color 0.2s;}
+.search-link:hover{color:var(--cta);}
+.section-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-body);}
+.section-btn .chevron{transition:transform 0.3s;color:var(--text-3);font-size:1rem;}
+.section-btn.active .chevron{transform:rotate(180deg);}
+.section-btn .title{font-size:0.875rem;font-weight:700;letter-spacing:0.04em;color:var(--text-2);transition:color 0.2s;}
+.section-btn.active .title{color:var(--primary);}
+.section-btn:hover .title{color:var(--text);}
+</style>
+</head>
+<body>
+
+<!-- SEARCH HEADER (sticky) -->
+<div style="padding:1.5rem 1rem;border-bottom:1px solid #f0f0f0;position:sticky;top:0;background:#fff;z-index:10;">
+  <div style="position:relative;max-width:672px;margin:0 auto;">
+    <i class="ti ti-search" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-3);font-size:1.1rem;"></i>
+    <input type="text" placeholder="Search for Mirrors, Glass, Services..." oninput="filterSearch(this.value)" style="width:100%;background:#f9fafb;border:none;border-radius:12px;padding:0.875rem 1rem 0.875rem 2.75rem;font-size:0.875rem;font-family:var(--font-body);color:var(--text);">
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div style="max-width:672px;margin:0 auto;padding:2rem 1rem;">
+  <h1 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;letter-spacing:0.04em;margin-bottom:2rem;color:var(--text);text-transform:uppercase;">Popular Searches</h1>
+
+  <div id="sections-list" style="display:flex;flex-direction:column;">
+
+    <!-- Section 1: Experience Centres (open by default) -->
+    <div class="section-item" style="border-bottom:1px solid #f9fafb;">
+      <button class="section-btn active" onclick="toggleSection(this)">
+        <span class="title">Visit our Experience Centres</span>
+        <i class="ti ti-chevron-down chevron"></i>
+      </button>
+      <div class="section-content open">
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem 0.75rem;">
+          <a href="#" class="search-link">GlassQuick Experience Centre in Pune</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">GlassQuick Experience Centre in Mumbai</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">GlassQuick Experience Centre in Thane</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">GlassQuick Experience Centre in Navi Mumbai</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">GlassQuick Experience Centre in Noida</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">GlassQuick Experience Centre in Gurgaon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Mirrors -->
+    <div class="section-item" style="border-bottom:1px solid #f9fafb;">
+      <button class="section-btn" onclick="toggleSection(this)">
+        <span class="title">Mirrors</span>
+        <i class="ti ti-chevron-down chevron"></i>
+      </button>
+      <div class="section-content">
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem 0.75rem;">
+          <a href="#" class="search-link">LED Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Acrylic Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Framed Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Decorative Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Frameless Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Full Length Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Bathroom Mirror</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Smart Mirror</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: By Glass Type -->
+    <div class="section-item" style="border-bottom:1px solid #f9fafb;">
+      <button class="section-btn" onclick="toggleSection(this)">
+        <span class="title">By Glass Type</span>
+        <i class="ti ti-chevron-down chevron"></i>
+      </button>
+      <div class="section-content">
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem 0.75rem;">
+          <a href="#" class="search-link">Toughened Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Frosted Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Laminated Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Reflective Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Tinted Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Lacquered Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Clear Glass</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: By Application -->
+    <div class="section-item" style="border-bottom:1px solid #f9fafb;">
+      <button class="section-btn" onclick="toggleSection(this)">
+        <span class="title">By Application</span>
+        <i class="ti ti-chevron-down chevron"></i>
+      </button>
+      <div class="section-content">
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem 0.75rem;">
+          <a href="#" class="search-link">Bathroom Glass</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Office Partitions</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Bedroom Mirrors</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Living Room Decor</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Kitchen Splashbacks</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Balcony Railing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: By Price -->
+    <div class="section-item" style="border-bottom:1px solid #f9fafb;">
+      <button class="section-btn" onclick="toggleSection(this)">
+        <span class="title">By Price</span>
+        <i class="ti ti-chevron-down chevron"></i>
+      </button>
+      <div class="section-content">
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem 0.75rem;">
+          <a href="#" class="search-link">Under ₹2,000</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">₹2,000 - ₹5,000</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">₹5,000 - ₹10,000</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Above ₹10,000</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6: Service Areas -->
+    <div class="section-item" style="border-bottom:1px solid #f9fafb;">
+      <button class="section-btn" onclick="toggleSection(this)">
+        <span class="title">Service Areas</span>
+        <i class="ti ti-chevron-down chevron"></i>
+      </button>
+      <div class="section-content">
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem 0.75rem;">
+          <a href="#" class="search-link">Glass installation in Mumbai</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Glass installation in Pune</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Glass installation in Thane</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Glass installation in Bangalore</a><span style="color:#e5e7eb;font-size:0.875rem;">|</span>
+          <a href="#" class="search-link">Glass installation in Delhi NCR</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function toggleSection(btn) {
+  var content = btn.nextElementSibling;
+  var isOpen = content.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.section-content').forEach(function(c){c.classList.remove('open');});
+  document.querySelectorAll('.section-btn').forEach(function(b){b.classList.remove('active');});
+  // Open clicked if was closed
+  if (!isOpen) {
+    content.classList.add('open');
+    btn.classList.add('active');
+  }
+}
+
+function filterSearch(query) {
+  var q = query.toLowerCase().trim();
+  document.querySelectorAll('.section-item').forEach(function(item) {
+    var links = item.querySelectorAll('.search-link');
+    var hasMatch = false;
+    links.forEach(function(link) {
+      if (!q || link.textContent.toLowerCase().includes(q)) {
+        link.style.display = '';
+        hasMatch = true;
+      } else {
+        link.style.display = 'none';
+      }
+    });
+    item.style.display = hasMatch ? '' : 'none';
+    // Auto-open sections with matches
+    if (q && hasMatch) {
+      item.querySelector('.section-content').classList.add('open');
+      item.querySelector('.section-btn').classList.add('active');
+    }
+  });
+}
+</script>
+</body>
+</html>
