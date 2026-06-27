@@ -1,0 +1,1008 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlassQuick Footer</title>
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body> -->
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Glass Solutions for Homes & Offices | Glassquick</title>
+  <meta name="description"
+    content="Glassquick offers premium shower glass, frameless partitions, mirrors, railings & aluminium windows across Mumbai, Delhi, Bangalore & all major Indian cities.">
+  <link rel="canonical" href="https://glassquick.in/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glassquick.in/">
+  <meta property="og:title" content="Glassquick — Premium Glass Solutions for Indian Homes & Offices">
+  <meta property="og:description" content="Frameless shower partitions, custom mirrors, glass railings, aluminium windows & more. Serving Mumbai, Delhi, Bangalore and all major Indian cities.">
+  <meta property="og:image" content="https://glassquick.in/images/og-homepage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Glassquick — Premium Glass Solutions">
+  <meta property="og:site_name" content="Glassquick">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@glassquick">
+  <meta name="twitter:title" content="Glassquick — Premium Glass Solutions for Indian Homes & Offices">
+  <meta name="twitter:description" content="Frameless shower partitions, custom mirrors, glass railings, aluminium windows & more.">
+  <meta name="twitter:image" content="https://glassquick.in/images/twitter-card.jpg">
+  <meta name="twitter:image:alt" content="Glassquick premium glass products for modern Indian interiors">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  
+  <!-- Google Fonts + Brand variables (Poppins/Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ----- BRAND VARIABLES (GlassQuick Guidelines) ----- */
+    :root {
+      /* Core brand colors */
+      --primary: #1A4F7A;
+      --secondary: #0992C2;
+      --cta: #1E88E5;
+      --accent: #00A8A8;
+      --accent-hov: #1565C0;
+      /* Functional */
+      --green: #2E7D32;
+      --error: #D32F2F;
+      --border: #E0E0E0;
+      --surface: #FFFFFF;
+      /* Typography colors */
+      --text: #1A1A1A;
+      --text-2: #555555;
+      --text-3: #888888;
+      /* Shadows / radius */
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      /* Font families */
+      --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-2);
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Headings use Poppins per brand */
+    h1, h2, h3, h4, .hero-cta, .trust-item strong, summary, .footer-link-list a, .glassquick-footer h3, .hero-overlay h1, .hero-overlay p, .hero-cta, .link-mirror, .link-nameplate, .link-shower, .link-doors, .link-windows, .link-railing, .link-space, .link-decor, .link-glass {
+      font-family: var(--font-sans);
+    }
+
+    /* body content / paragraphs use Inter */
+    p, li, .footer-copyright, .footer-nap, .trust-item span, details p {
+      font-family: var(--font-body);
+    }
+
+    /* links base */
+    a {
+      text-decoration: none;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+    a:hover { opacity: 0.85; }
+
+    /* category link styles (keep brand accent) */
+    .link-mirror { color: var(--cta); font-weight: 600; text-decoration: none; }
+    .link-nameplate { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .link-shower { color: var(--secondary); font-weight: 600; text-decoration: none; }
+    .link-doors { color: #7C3AED; font-weight: 600; text-decoration: none; }
+    .link-windows { color: #16A34A; font-weight: 600; text-decoration: none; }
+    .link-railing { color: #EA580C; font-weight: 600; text-decoration: none; }
+    .link-space { color: #0F172A; font-weight: 600; text-decoration: none; }
+    .link-decor { color: #DB2777; font-weight: 600; text-decoration: none; }
+    .link-glass { color: #6B7280; font-weight: 600; text-decoration: none; }
+
+    /* main container */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Hero section - alignment fixed (no overflow) */
+    .hero {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+    .hero img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom right, rgba(10,20,40,0.55) 0%, rgba(10,20,40,0.2) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem 2rem;
+    }
+    .hero-overlay h1 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+      max-width: 640px;
+    }
+    .hero-overlay p {
+      color: rgba(255,255,255,0.92);
+      font-size: 1rem;
+      margin: 0 0 1.25rem;
+      max-width: 560px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--cta);
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.7rem 1.8rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      width: fit-content;
+      transition: background 0.2s;
+      font-family: var(--font-sans);
+    }
+    .hero-cta:hover {
+      background: var(--accent-hov);
+      opacity: 1;
+    }
+
+    /* Category grid & cards */
+    .category-section {
+      margin-bottom: 1.8rem;
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .category-section img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      display: block;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .category-section h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0 0 0.5rem 0;
+    }
+    .category-section p {
+      color: var(--text-2);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Trust bar - brand alignment */
+    .trust-bar {
+      background: #F8F9FB;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+    .trust-item strong {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: var(--font-sans);
+    }
+    .trust-item span {
+      font-size: 0.875rem;
+      color: var(--text-2);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin-bottom: 2.5rem;
+    }
+    .faq-section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-family: var(--font-sans);
+    }
+    details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      padding: 1rem 1.25rem;
+      transition: background 0.2s;
+    }
+    details[open] {
+      background: #F8F9FB;
+    }
+    summary {
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--text);
+      font-family: var(--font-sans);
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: " +";
+      font-weight: 400;
+      color: var(--cta);
+    }
+    details[open] summary::after {
+      content: " −";
+    }
+    details p {
+      margin: 0.75rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-2);
+    }
+
+    /* Footer (brand) */
+    .glassquick-footer {
+      background: #0F172A;
+      color: #D1D5DB;
+      padding: 3rem 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .glassquick-footer h3 {
+      color: #F9FAFB;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 0 0 0.75rem;
+    }
+    .glassquick-footer a {
+      color: #9CA3AF;
+      text-decoration: none;
+      font-size: 0.875rem;
+      line-height: 1.8;
+      transition: color 0.2s;
+    }
+    .glassquick-footer a:hover {
+      color: #F9FAFB;
+    }
+    /* Last section — light background, dark text */
+    .glassquick-footer {
+      background: #F1F5F9 !important;
+      color: #1a1a1a !important;
+    }
+    .glassquick-footer h3 {
+      color: #0f172a !important;
+    }
+    .glassquick-footer a {
+      color: #334155 !important;
+      text-decoration: none;
+      transition: color 0.2s ease, padding-left 0.2s ease;
+      display: inline-block;
+    }
+    .glassquick-footer a:hover {
+      color: #000000 !important;
+      padding-left: 6px;
+      opacity: 1;
+    }
+    .glassquick-footer .footer-nap a:hover {
+      color: #000000 !important;
+      padding-left: 0;
+      text-decoration: underline;
+    }
+    .footer-link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .footer-link-list a {
+      display: block;
+    }
+
+    /* NAP block */
+    .footer-nap {
+      border-top: 1px solid #1E293B;
+      max-width: 1100px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: flex-start;
+      font-size: 0.875rem;
+      color: #9CA3AF;
+      font-style: normal;
+    }
+    .footer-nap strong {
+      color: #F9FAFB;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .footer-nap a {
+      color: #60A5FA;
+      text-decoration: none;
+    }
+    .footer-copyright {
+      border-top: 1px solid #1E293B;
+      max-width: 1100px;
+      margin: 1.5rem auto 0;
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      color: #6B7280;
+      text-align: center;
+    }
+    /* extra spacing for consistency */
+    .intro-text {
+      margin-bottom: 1.25rem;
+    }
+    /* ensure links lists do not break */
+    ul, li {
+      font-family: var(--font-body);
+    }
+    .glassquick-footer ul li {
+      color: #9CA3AF;
+    }
+    @media (max-width: 700px) {
+      .hero-overlay {
+        padding: 1.25rem;
+      }
+      .hero img {
+        height: 380px;
+      }
+      .trust-bar {
+        padding: 1rem;
+      }
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+
+
+</head>
+<body>
+
+<main>
+  <!-- Hero Section (no alignment issues - overlay properly positioned, image responsive) -->
+  <section class="hero" aria-label="Glassquick hero banner">
+    <img
+      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80"
+      alt="Premium frameless glass shower partition and mirror wall in a modern Indian luxury bathroom by Glassquick"
+      width="1400"
+      height="480"
+      fetchpriority="high"
+      loading="eager"
+    >
+    <div class="hero-overlay">
+      <h1>Premium Glass Solutions for Modern Indian Homes & Offices</h1>
+      <p>
+        Frameless shower enclosures, custom mirrors, glass railings, aluminium windows,
+        and architectural partitions — crafted for contemporary Indian spaces.
+      </p>
+      <a href="/contact-us" class="hero-cta">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- Trust Bar (stats block) -->
+  <div class="trust-bar" aria-label="Glassquick key statistics">
+    <div class="trust-item"><strong>5,000+</strong><span>Projects completed</span></div>
+    <div class="trust-item"><strong>8 Cities</strong><span>Pan-India coverage</span></div>
+    <div class="trust-item"><strong>4.8 ★</strong><span>Average customer rating</span></div>
+    <div class="trust-item"><strong>5-Year</strong><span>Glass panel warranty</span></div>
+    <div class="trust-item"><strong>Since 2020</strong><span>Trusted by homeowners</span></div>
+  </div>
+
+  <!-- Company intro paragraph -->
+  <p class="intro-text">
+    At Glassquick, we believe every home and workspace deserves elegance, functionality, and modern design.
+    From premium glass interiors to customized architectural solutions, Glassquick brings together innovation,
+    durability, and luxury for contemporary Indian spaces. Whether you are designing a new home, renovating
+    your bathroom, or upgrading your office interiors, our expertly crafted glass and aluminium solutions are
+    designed to transform ordinary spaces into premium experiences.
+  </p>
+
+  <!-- Category navigation inline links (unchanged) -->
+  <p>
+    Explore our wide range of premium categories including
+    <a href="/mirrors" class="link-mirror">Mirrors</a>,
+    <a href="/name-plates" class="link-nameplate">Name Plates</a>,
+    <a href="/shower-glass" class="link-shower">Shower</a>,
+    <a href="/doors-partitions" class="link-doors">Doors &amp; Partitions</a>,
+    <a href="/windows" class="link-windows">Windows</a>,
+    <a href="/glass-railing" class="link-railing">Railing</a>,
+    <a href="/space-solutions" class="link-space">Space Solutions</a>,
+    <a href="/home-decor" class="link-decor">Home Decor</a>, and premium
+    <a href="/glass-types" class="link-glass">Glass Types</a> —
+    all designed to match modern interiors with premium aesthetics and long-lasting performance.
+  </p>
+
+  <!-- Product grid - categories with images and descriptions (original content preserved) -->
+  <div class="category-grid">
+    <section class="category-section" aria-labelledby="mirrors-heading">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Premium decorative wall mirror with backlit LED frame for bedroom and bathroom by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="mirrors-heading">Premium Mirrors Designed for Elegant Interiors</h2>
+      <p>Glassquick premium <a href="/mirrors" class="link-mirror">Mirrors</a> are crafted to add sophistication, brightness, and depth to every room. Whether you are looking for bathroom vanity mirrors, full-length mirrors, decorative wall mirrors, or modern designer mirrors, our collection combines functionality with luxury styling. Designed for bedrooms, living rooms, hotels, salons, and commercial spaces, Glassquick mirrors are built with premium-quality reflective glass and modern finishing solutions.</p>
+    </section>
+    <section class="category-section" aria-labelledby="nameplates-heading">
+      <img src="https://images.unsplash.com/photo-1505691723518-36a5b4a1c0c9?auto=format&fit=crop&w=900&q=80" alt="Custom LED backlit glass name plate for modern home entrance and apartment door by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="nameplates-heading">Stylish Name Plates for Homes &amp; Offices</h2>
+      <p>Create a lasting first impression with customized <a href="/name-plates" class="link-nameplate">Name Plates</a> designed for modern homes, apartments, offices, and commercial spaces. Glassquick offers acrylic name plates, glass name boards, stainless steel finishes, LED name plates, and premium customized designs that enhance your entrance aesthetics while maintaining durability and elegance.</p>
+    </section>
+    <section class="category-section" aria-labelledby="shower-heading">
+      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Frameless toughened glass shower partition with minimal hardware for a luxury modern bathroom by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="shower-heading">Frameless Shower Glass Partitions for Modern Bathrooms</h2>
+      <p>Upgrade your bathrooms with premium <a href="/shower-glass" class="link-shower">Shower Glass</a> solutions engineered for luxury and functionality. Glassquick shower partitions include frameless shower enclosures, sliding shower doors, fixed glass panels, and customized toughened glass systems designed for modern bathrooms. Our shower glass solutions maximize space, improve aesthetics, and create a clean, minimal, and elegant bathroom environment for homes, hotels, and luxury apartments.</p>
+    </section>
+    <section class="category-section" aria-labelledby="doors-heading">
+      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80" alt="Modern glass office cabin partition with aluminium frame and sliding door for contemporary workspace by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="doors-heading">Modern Glass Doors &amp; Partitions for Smart Spaces</h2>
+      <p>Glassquick <a href="/doors-partitions" class="link-doors">Doors &amp; Partitions</a> are designed to create modern, open, and sophisticated interiors for homes and offices. From office glass cabins and conference room partitions to sliding glass doors and aluminium-framed systems, our customized partition solutions combine privacy, aesthetics, and natural lighting.</p>
+    </section>
+    <section class="category-section" aria-labelledby="windows-heading">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Slim profile aluminium sliding windows with double glazing for a contemporary Indian home by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="windows-heading">Premium Aluminium Windows &amp; Sliding Systems</h2>
+      <p>Our high-performance <a href="/windows" class="link-windows">Windows</a> and aluminium systems are built for durability, thermal efficiency, and modern architectural appeal. Glassquick offers sliding windows, slim aluminium systems, folding windows, and customized architectural solutions designed for contemporary homes and commercial buildings.</p>
+    </section>
+    <section class="category-section" aria-labelledby="railing-heading">
+      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Toughened glass balcony railing with stainless steel base for terrace and staircase by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="railing-heading">Elegant Glass Railings for Balconies &amp; Staircases</h2>
+      <p>Glassquick premium <a href="/glass-railing" class="link-railing">Railing</a> solutions are designed to enhance safety while maintaining a clean and modern appearance. Our toughened glass railings are ideal for balconies, staircases, terraces, pool areas, and commercial spaces.</p>
+    </section>
+    <section class="category-section" aria-labelledby="space-heading">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Modular sliding glass partition system for space-efficient home and office interiors by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="space-heading">Smart Space Solutions for Modern Living</h2>
+      <p>Modern homes require intelligent and efficient <a href="/space-solutions" class="link-space">Space Solutions</a> that maximize functionality without compromising aesthetics. Glassquick offers innovative glass-based interior concepts including sliding partitions, modular dividers, foldable systems, and customized space optimization solutions.</p>
+    </section>
+    <section class="category-section" aria-labelledby="decor-heading">
+      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80" alt="Decorative frosted glass wall panel and glass shelf for modern Indian living room home decor by Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="decor-heading">Luxury Glass Home Decor Solutions</h2>
+      <p>Enhance your interiors with premium <a href="/home-decor" class="link-decor">Home Decor</a> glass solutions crafted to bring elegance and style into every space. From decorative mirrors and glass shelves to customized wall panels and modern glass accessories, Glassquick home decor products are designed to complement modern Indian interiors.</p>
+    </section>
+    <section class="category-section" aria-labelledby="glasstypes-heading">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Samples of toughened, frosted, tinted, and laminated glass types available at Glassquick" width="600" height="260" loading="lazy">
+      <h2 id="glasstypes-heading">Explore Premium Glass Types &amp; Finishes</h2>
+      <p>Glassquick offers a wide range of premium <a href="/glass-types" class="link-glass">Glass Types</a> suitable for residential and commercial applications. Our collection includes toughened glass, frosted glass, tinted glass, laminated glass, reflective glass, textured glass, and decorative finishes designed for safety, privacy, durability, and premium aesthetics.</p>
+    </section>
+  </div>
+
+  <!-- FAQ Section (fully preserved) -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <details><summary>What types of glass does Glassquick offer?</summary><p>Glassquick offers toughened glass, frosted glass, laminated glass, reflective glass, tinted glass, and decorative glass for both residential and commercial applications. Each type is available in custom sizes and finishes.</p></details>
+    <details><summary>Which cities does Glassquick serve?</summary><p>Glassquick provides premium glass solutions across Mumbai, Delhi, Bangalore, Hyderabad, Pune, Chennai, Ahmedabad, and Kolkata, with a network of professional installation teams in each city.</p></details>
+    <details><summary>Can I get customised glass designs for my home?</summary><p>Yes. All Glassquick products are available in custom sizes, shapes, and finishes. Share your room dimensions and design preferences and our team will provide a tailored solution and quote.</p></details>
+    <details><summary>Is toughened glass safe for shower enclosures?</summary><p>Yes. Toughened (tempered) glass is the industry standard for shower enclosures. It is 4–5 times stronger than ordinary glass. If it does break, it shatters into small blunt fragments rather than sharp shards, significantly reducing injury risk.</p></details>
+    <details><summary>How long does professional glass installation take?</summary><p>Installation time varies by product type. A standard shower partition takes 4–6 hours. A full-room glass partition system may take 1–2 days. Our team provides a specific timeline at the time of measurement and booking.</p></details>
+    <details><summary>Do you offer a warranty on glass products?</summary><p>Yes. All Glassquick products come with a manufacturer warranty. The warranty period varies by product — typically 1 year on hardware and fittings and 5 years on glass panels. Contact us for product-specific warranty details.</p></details>
+  </section>
+</main>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      /* ===== FOOTER STYLES ===== */
+      .footer {
+        font-family: 'Poppins', sans-serif;
+        background: #1a3a5c;
+        color: #cdd8e3;
+      }
+
+      /* --- Section 1: USP Strip --- */
+      .footer-usp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+        background: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .footer-usp-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-right: 1px solid #e0e0e0;
+        white-space: nowrap;
+      }
+      .footer-usp-item:last-child {
+        border-right: none;
+      }
+      .footer-usp-item .icon {
+        font-size: 1rem;
+        opacity: 0.75;
+      }
+
+      /* --- Section 2: Main Links Grid --- */
+      .footer-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        max-width: 100%;
+        margin: 0;
+        padding: 48px 40px 40px 24px;
+        background: var(--primary); /* #1A4F7A */
+      }
+
+      /* Left brand column */
+      .footer-brand-col {
+        flex: 0 0 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-right: auto;
+        padding-top: 20px;
+      }
+      .footer-brand-logo {
+        width: 130px;
+        height: 130px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-top: -15px;
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+        cursor: pointer;
+      }
+      .footer-brand-logo:hover {
+        transform: translateY(-12px) scale(1.06);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      }
+      .footer-brand-tagline {
+        font-size: 0.85rem;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 500;
+        margin: 0 0 4px 0;
+        font-family: var(--font-sans);
+        line-height: 1.5;
+      }
+      .footer-brand-contact {
+        font-size: 0.80rem;
+        color: #cce0f0;
+        margin: 0;
+        font-family: var(--font-body);
+        line-height: 1.8;
+      }
+      .footer-brand-contact a {
+        color: #cce0f0;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .footer-brand-contact a:hover {
+        color: var(--accent); /* #00A8A8 */
+      }
+
+      /* Columns */
+      .footer-column {
+        flex: 1;
+        min-width: 140px;
+      }
+      .footer-title {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-family: var(--font-sans);
+        margin: 0 0 14px 0;
+        padding-bottom: 8px;
+        border-bottom: 2px solid var(--secondary); /* #0992C2 */
+        display: inline-block;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-links li a {
+        color: #cce0f0;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 400;
+        font-family: var(--font-body);
+        transition: color 0.2s ease, padding-left 0.2s ease;
+        line-height: 1.4;
+        display: inline-block;
+      }
+      .footer-links li a:hover {
+        color: var(--accent); /* #00A8A8 */
+        padding-left: 4px;
+        opacity: 1;
+      }
+
+      /* --- Section 3: Bottom Bar --- */
+      .footer-bottom-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px 40px;
+        border-top: 1px solid var(--secondary);
+        background: var(--primary); /* #1A4F7A */
+      }
+      .footer-logo {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #ffffff;
+        font-family: var(--font-sans);
+      }
+      .footer-logo span {
+        font-style: italic;
+        color: var(--secondary); /* #0992C2 */
+      }
+      .footer-tagline {
+        font-size: 0.7rem;
+        color: #cce0f0;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: var(--font-body);
+        margin-top: 2px;
+      }
+      .footer-socials {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .footer-socials a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--secondary);
+        border-radius: 8px;
+        color: #cce0f0;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+      .footer-socials a:hover {
+        background: var(--accent); /* #00A8A8 */
+        color: #ffffff;
+        border-color: var(--accent);
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .footer-usp {
+          justify-content: flex-start;
+          overflow-x: auto;
+        }
+        .footer-container {
+          padding: 32px 20px 28px;
+          gap: 1.5rem;
+        }
+        .footer-column {
+          min-width: 120px;
+          flex: 1 1 40%;
+        }
+        .footer-bottom-bar {
+          padding: 16px 20px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+
+    <footer class="footer">
+
+        <!-- USP Strip -->
+        <div class="footer-usp">
+            <div class="footer-usp-item"><span class="icon">🚚</span> Why GlassQuick</div>
+            <div class="footer-usp-item"><span class="icon">🔧</span> Free Installation</div>
+            <div class="footer-usp-item"><span class="icon">🛡️</span> Best Warranty</div>
+            <div class="footer-usp-item"><span class="icon">📦</span> Safe Delivery</div>
+            <div class="footer-usp-item"><span class="icon">📐</span> Free Measurement Visit</div>
+        </div>
+
+        <!-- Main Links Grid -->
+        <div class="footer-container">
+
+            <!-- Left: Logo + Info -->
+            <div class="footer-brand-col">
+                <img src="/glassquick-mobile.png"GlassQuick Logo" class="footer-brand-logo" onerror="this.style.display='none'">
+                <p class="footer-brand-tagline">Select, Customize, Buy</p>
+                <p class="footer-brand-contact" style="padding-left:14px">hello@glassquick.in</p>
+                <p class="footer-brand-contact" style="padding-left:14px">+91-XXXXXXXXXX</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Shop All</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Mirrors</a></li>
+                    <li><a href="#">Name Plates</a></li>
+                    <li><a href="#">Shower</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">Railing</a></li>
+                    <li><a href="#">Home Decor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="http://localhost:3000/measurement-visit">Measurement Visit</a></li>
+                    <li><a href="http://localhost:3000/book-visit">Book a Site Visit</a></li>
+                    <li><a href="http://localhost:3000/bulk-orders">Bulk Orders</a></li>
+                    <li><a href="http://localhost:3000/size-guide">Size Guide</a></li>
+                    <li><a href="http://localhost:3000/vendor-registration">Vendor Registration</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">About GlassQuick</h3>
+                <ul class="footer-links">
+                    <li><a href="http://localhost:3000/about">About Us</a></li>
+                    <li><a href="http://localhost:3000/reviews">Reviews</a></li>
+                    <li><a href="http://localhost:3000/before-after">Before / After</a></li>
+                    <li><a href="http://localhost:3000/blog">Blog</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Policy</h3>
+                <ul class="footer-links">
+                    <li><a href="http://localhost:3000/warranty">Warranty</a></li>
+                    <li><a href="http://localhost:3000/cancellation-policy">Cancellation Policy</a></li>
+                    <li><a href="http://localhost:3000/exchange-policy">Exchange Policy</a></li>
+                    <li><a href="http://localhost:3000/shipping-policy">Shipping Policy</a></li>
+                    <li><a href="http://localhost:3000/privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Help</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Request Callback</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+            <div class="footer-brand">
+                <div class="footer-logo">Glass<span>Quick</span></div>
+                <div class="footer-tagline">Your One-Stop Glass Solution</div>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+<div class="footer-banner" style="max-width:1100px;margin:0 auto 1.25rem;padding:0 1.5rem;">
+  <img src="https://images.unsplash.com/photo-1505691723518-36a5b4a1c0c9?auto=format&fit=crop&w=1600&q=80" alt="Glassquick banner" style="width:100%;height:auto;border-radius:8px;display:block;">
+</div>
+
+<footer class="glassquick-footer" itemscope itemtype="https://schema.org/Organization" style="color:#000000; background:#F1F5F9;">
+  <meta itemprop="name" content="Glassquick">
+
+  <div class="footer-inner">
+
+    <nav aria-label="Bathroom and shower glass products">
+      <h3>Bathroom &amp; Shower Solutions</h3>
+      <div class="footer-link-list">
+        <a href="/shower-glass">Frameless Shower Glass</a>
+        <a href="/sliding-shower-door">Sliding Shower Doors</a>
+        <a href="/bathroom-partition">Bathroom Glass Partitions</a>
+        <a href="/toughened-shower-glass">Toughened Shower Glass</a>
+        <a href="/corner-shower-partition">Corner Shower Partitions</a>
+        <a href="/luxury-bathroom-glass">Luxury Bathroom Glass</a>
+      </div>
+
+      <h3 style="margin-top:1.5rem">Mirrors &amp; Home Decor</h3>
+      <div class="footer-link-list">
+        <a href="/mirrors">Decorative Mirrors</a>
+        <a href="/bathroom-mirrors">Bathroom Mirrors</a>
+        <a href="/full-length-mirror">Full Length Mirrors</a>
+        <a href="/led-mirrors">LED Mirrors</a>
+        <a href="/designer-mirror">Designer Mirrors</a>
+        <a href="/home-decor">Glass Home Decor</a>
+      </div>
+
+      <h3 style="margin-top:1.5rem">Name Plates &amp; Entrance Decor</h3>
+      <div class="footer-link-list">
+        <a href="/name-plates">Acrylic Name Plates</a>
+        <a href="/glass-name-plate">Glass Name Plates</a>
+        <a href="/led-name-plate">LED Name Boards</a>
+        <a href="/office-name-board">Office Name Boards</a>
+        <a href="/custom-name-plate">Customized Name Plates</a>
+      </div>
+    </nav>
+
+    <nav aria-label="Doors, partitions, windows and railings">
+      <h3>Doors, Partitions &amp; Windows</h3>
+      <div class="footer-link-list">
+        <a href="/doors-partitions">Glass Doors</a>
+        <a href="/office-partition">Office Glass Partitions</a>
+        <a href="/sliding-glass-door">Sliding Glass Doors</a>
+        <a href="/windows">Aluminium Windows</a>
+        <a href="/sliding-window">Sliding Windows</a>
+        <a href="/folding-window">Folding Window Systems</a>
+      </div>
+
+      <h3 style="margin-top:1.5rem">Railings &amp; Balcony Solutions</h3>
+      <div class="footer-link-list">
+        <a href="/glass-railing">Glass Railings</a>
+        <a href="/balcony-glass">Balcony Glass</a>
+        <a href="/staircase-railing">Staircase Railings</a>
+        <a href="/terrace-glass">Terrace Glass Solutions</a>
+        <a href="/toughened-railing">Toughened Glass Railings</a>
+      </div>
+
+      <h3 style="margin-top:1.5rem">Space Saving Solutions</h3>
+      <div class="footer-link-list">
+        <a href="/space-solutions">Sliding Partitions</a>
+        <a href="/foldable-glass">Foldable Glass Systems</a>
+        <a href="/office-space-solutions">Office Space Solutions</a>
+        <a href="/modular-glass">Modular Glass Concepts</a>
+        <a href="/glass-divider">Glass Room Dividers</a>
+      </div>
+    </nav>
+
+    <nav aria-label="Glass types and city service pages">
+      <h3>Premium Glass Types</h3>
+      <div class="footer-link-list">
+        <a href="/glass-types">Toughened Glass</a>
+        <a href="/frosted-glass">Frosted Glass</a>
+        <a href="/laminated-glass">Laminated Glass</a>
+        <a href="/reflective-glass">Reflective Glass</a>
+        <a href="/tinted-glass">Tinted Glass</a>
+        <a href="/decorative-glass">Decorative Glass</a>
+      </div>
+
+      <h3 style="margin-top:1.5rem">Glassquick Services by City</h3>
+      <div class="footer-link-list">
+        <a href="/mumbai">Glass Solutions in Mumbai</a>
+        <a href="/delhi">Glass Solutions in Delhi</a>
+        <a href="/bangalore">Glass Solutions in Bangalore</a>
+        <a href="/hyderabad">Glass Solutions in Hyderabad</a>
+        <a href="/pune">Glass Solutions in Pune</a>
+        <a href="/chennai">Glass Solutions in Chennai</a>
+        <a href="/ahmedabad">Glass Solutions in Ahmedabad</a>
+        <a href="/kolkata">Glass Solutions in Kolkata</a>
+      </div>
+      <!--
+        FIX 21: City link anchor text improved from just "Mumbai" to "Glass Solutions in Mumbai".
+        Descriptive anchor text is better for both SEO (keyword context) and accessibility.
+      -->
+    </nav>
+
+    <nav aria-label="Company information and policies">
+      <h3>Customer Support</h3>
+      <div class="footer-link-list">
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+        <a href="/shipping-policy">Shipping Policy</a>
+        <a href="/return-policy">Return Policy</a>
+      </div>
+
+      <h3 style="margin-top:1.5rem">Why Choose Glassquick</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;font-size:0.875rem;color:#9CA3AF;">
+        <li>Premium quality toughened glass</li>
+        <li>Customized designs to order</li>
+        <li>Professional installation support</li>
+        <li>5-year warranty on glass panels</li>
+        <li>Serving 8+ cities across India</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem">Trusted &amp; Secure</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;font-size:0.875rem;color:#9CA3AF;">
+        <li>SSL secured website</li>
+        <li>Safe UPI &amp; card payments</li>
+        <li>Data protection compliant</li>
+        <li>Secure checkout experience</li>
+      </ul>
+    </nav>
+
+  </div><!-- /.footer-inner -->
+
+  <!-- ════════════════════════════════════════════════════════
+       NAP — Name, Address, Phone
+       FIX 22: NAP block added to footer.
+       CRITICAL for local SEO. Google cross-references this against Google Business Profile.
+       IMPORTANT: Replace all placeholder values with real business data.
+       The address, phone, and email here must EXACTLY match your Google Business Profile.
+  ════════════════════════════════════════════════════════ -->
+  <address class="footer-nap" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <div>
+      <strong>Glassquick</strong>
+      <!-- Replace with real address -->
+      <span itemprop="streetAddress">Your Street Address, Area Name</span>,
+      <span itemprop="addressLocality">Mumbai</span>,
+      <span itemprop="addressRegion">Maharashtra</span> —
+      <span itemprop="postalCode">400067</span>,
+      <span itemprop="addressCountry">India</span>
+    </div>
+    <div>
+      <strong>Phone</strong>
+      <!-- Replace +91-8591020585 with real phone number -->
+      <a href="tel:+91XXXXXXXXXX" itemprop="telephone">+91-XXXXXXXXXX</a>
+    </div>
+    <div>
+      <strong>Email</strong>
+      <!-- Replace with real email -->
+      <a href="mailto:hello@glassquick.in" itemprop="email">hello@glassquick.in</a>
+    </div>
+    <div>
+      <strong>Hours</strong>
+      <span>Mon–Sat, 9 AM – 7 PM</span>
+    </div>
+  </address>
+
+  <div class="footer-copyright">
+    <p>© 2025 Glassquick. All rights reserved. | Premium Glass Solutions across India.</p>
+  </div>
+
+</footer>
+</body>
+</html>
